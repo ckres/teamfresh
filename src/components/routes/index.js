@@ -1,0 +1,1 @@
+export { default as ViewDealsRoute } from './ViewDealsRoute'
