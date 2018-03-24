@@ -1,7 +1,5 @@
-@import '../theme.scss';
-
 .deals-container {
-  font-family: 'museo-sans';
+  font-family: 'MuseoSans300', 'sans-serif';
   .deals-search {
     margin: 1rem 0 2rem 0;
     display: flex;
@@ -65,11 +63,12 @@
           }
           .deal-name {
             margin-bottom: 0.2rem;
-            font-weight: 600;
+            font-family: 'MuseoSans500';
             color: #4c4c4c;
           }
           .deal-price {
             color: #4c4c4c;
+            font-size: 0.8rem;
           }
         }
       }
