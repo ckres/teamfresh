@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import { ViewDealsRoute } from './components/routes'
 
-import logo from './logo.svg'
+import logo from './assets/logo.png'
 import './App.css'
 
 class App extends Component {
@@ -14,6 +14,9 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
+          <div className="top-logo">
+            <img src={logo}/>        
+          </div>
           <Route
             exact
             path={'/deals'}

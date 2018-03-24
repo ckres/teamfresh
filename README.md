@@ -23,22 +23,25 @@ and run
 npm start
 ```
 
-You will be redirected to http://localhost:3000 by default and everything is hot-reloaded, which means you don't have to refresh the browser everytime you did some code modification.
+You will be redirected to [http://localhost:3000](http://localhost:3000) by default and everything is hot-reloaded, which means you don't have to refresh the browser everytime you did some code modification.
 
 ## How to Work On Your Own Feature
 
 We use React.js as the front-end framework, which is kind of component based. Generally you could follow the steps that I provide below:
 
+1. Create your own branch, I suggest using a formatt in `yourName:featureName`, like `chang:view-deals`
 1. Create a React component file, for example, `ViewDeals.js`
-2. Create its corresponding style file with the same file name, and use `scss` as extension, `ViewDeals.scss`
-3. Write the according route, in `App.js`
-4. Mock your data if needed. If it's a generic/big feature, ideally I recommend you create a separated store like `DealStore.js`. But don't create too many stores as this could be hard to maintain in the future.
+1. Create its corresponding style file with the same file name, and use `scss` as extension, `ViewDeals.scss`
+1. Write the according route, in `App.js`
+1. Mock your data if needed. If it's a generic/big feature, ideally I recommend you create a separated store like `DealStore.js`. But don't create too many stores as this could be hard to maintain in the future.
+1. The bottom line is that it doesn't break the current code base, so plz make sure you fully test your feature.
+1. Push your feature and submit a pull request.
 
 ## Conventions
 
 ### Styles
 
-We use `Sass`, which is a preprocessor of css. It transform `scss` files to `css`. There are quite a few awesome features such as nesting, using variables, etc. It's quite easy to pick up. 
+We use `Sass`, which is a preprocessor of css. It transform `scss` files to `css`. There are quite a few awesome features such as nesting, using variables, etc. It's quite easy to pick up.
 
 > But pay attention that in the .js files you are still importing `.css` rather than `.scss`
 
