@@ -15,8 +15,16 @@ class App extends Component {
       <Router>
         <div className="container">
           <div className="top-logo">
-            <img src={logo}/>        
+            <img src={logo} alt="logo"/>        
           </div>
+          <Route
+            exact
+            path={'/'}
+            render={() => {
+              // default go to homepage
+              return <Redirect to={'/deals'} />
+            }}
+          />
           <Route
             exact
             path={'/deals'}

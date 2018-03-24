@@ -1,17 +1,21 @@
 {
   "name": "teamfresh",
   "version": "0.0.1",
+  "homepage" : "http://ckres.github.io/teamfresh",
   "scripts": {
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "node-sass-chokidar": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
