@@ -1,0 +1,77 @@
+.deals-container {
+  font-family: 'MuseoSans300', 'sans-serif';
+  .deals-search {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 0 0.8rem;
+      margin-right: 0.5rem;
+      width: 90%;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      box-shadow: 0 0.3rem 1rem #e8e8e8;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+  .deals-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .deal-item {
+      margin-bottom: 1rem;
+      &:nth-child(odd) {
+        margin-right: 1rem;
+      }
+      width: 47%;
+      height: 15rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 1rem 0.5rem #c3c3c3;
+
+      .deal-item-container {
+        display: flex;
+        position: relative;
+        height: 100%;
+        .deal-distributor-avatar {
+          img { 
+            width: 2rem;
+            border-radius: 100%;
+          }
+          position: absolute;
+          right: 0.4rem;
+          top: 0.4rem;
+        }
+        .deal-description {
+          align-self: flex-end;
+          padding: 0.5rem;
+          height: 4rem;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.9);
+
+          .distance {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 0.2rem;
+            color: #8a8a8a;
+            font-size: 0.8rem;
+          }
+          .deal-name {
+            margin-bottom: 0.2rem;
+            font-family: 'MuseoSans500';
+            color: #4c4c4c;
+          }
+          .deal-price {
+            color: #4c4c4c;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
