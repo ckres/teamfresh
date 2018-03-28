@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom'
 import { ViewDealsRoute } from './components/routes'
+import { SignUpRoute } from './components/routes'
 
 import logo from './assets/logo.png'
 import './App.css'
@@ -31,6 +32,14 @@ class App extends Component {
             render={() => {
               // default go to homepage
               return <ViewDealsRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/signup'}
+            render={() => {
+              // default go to homepage
+              return <SignUpRoute />
             }}
           />
         </div>
