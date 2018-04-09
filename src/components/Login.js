@@ -5,7 +5,14 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
+import Background from '../assets/Cover.jpg';
 
+var sectionStyle = {
+  height: "106vh",
+  width: "100vw",
+  backgroundImage: "url(" + Background + ")",
+  margin: "-15px",
+};
 export default class Login extends Component {
   state = {
 		  
@@ -14,6 +21,7 @@ export default class Login extends Component {
   render() {
     const { deals } = this.state
     return (
+	<section style={ sectionStyle }>
       <div className="login-container">
       <ReactCSSTransitionGroup
       transitionName="example" transitionAppear={true}
@@ -34,6 +42,7 @@ export default class Login extends Component {
       </ReactCSSTransitionGroup>
         
       </div>
+      </section>
     )
   }
 }
