@@ -8,10 +8,11 @@ import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 import Background from '../assets/Cover.jpg';
 
 var sectionStyle = {
-  height: "106vh",
+  height: "100vh",
   width: "100vw",
   backgroundImage: "url(" + Background + ")",
-  margin: "-15px",
+  position: "fixed",
+  margin: "-15px"
 };
 export default class Login extends Component {
   state = {
