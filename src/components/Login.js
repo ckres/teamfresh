@@ -21,10 +21,10 @@ export default class Login extends Component {
       transitionAppearTimeout={3000}>
 	      <img src={logoTitle} alt="FreshSpire" className="img-format"/>
 	      <div className="login-credentials">
-	      	<input type="text" placeholder="Username"/>
+	      	<label>Username <input type="text"/></label>
 	      </div>
 		  <div className="login-credentials">
-		    <input type="text" placeholder="Password"/>
+		    <label>Password <input type="text"/></label>
 		  </div>
 		  <div className="btn-submit">
 		    <input type="button" value="Login" />

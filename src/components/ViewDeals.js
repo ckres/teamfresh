@@ -3,6 +3,7 @@ import { SearchIcon, LocationIcon } from './Icons'
 import DealStore from './stores/DealStore'
 
 import './ViewDeals.css'
+import logo from '../assets/logo.png'
 
 export default class ViewDeals extends Component {
   state = {
@@ -26,6 +27,9 @@ export default class ViewDeals extends Component {
           className="deal-item"
           style={{ backgroundImage: `url(${thumbnail})` }}
         >
+        <div className="top-logo">
+        <img src={logo} alt="logo"/>        
+      </div>
           <div className="deal-item-container">
             <div className="deal-distributor-avatar">
               <img src={`//logo.clearbit.com/${distributor}.com`} alt="distributor" />

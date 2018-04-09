@@ -7,16 +7,20 @@
 	justify-content: center;
 
     input {
-      padding: 0 0.8rem;
-      margin-right: 0.5rem;
-      border-radius: 0.5rem;
-      height: 2.5rem;
-      box-shadow: 0 0.3rem 1rem #e8e8e8;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      cursor: pointer;
+	    background: transparent;
+	    border: none;
+	    border-bottom: 1px solid #3DD28F;
+	    font-size: 1rem;
+	  	position: relative;
+	  	top: -3em;
+	  	
+		    
     }
+    label {
+	  width: 6em;
+	  margin-right: 3em;
+	  padding-top: 1.5em;
+	}
   }
 
   .btn-submit {
@@ -45,7 +49,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 60%;
+      width: 50%;
   }
   .example-appear {
 	  opacity: 0.01;

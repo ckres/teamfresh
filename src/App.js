@@ -7,7 +7,6 @@ import {
 import { ViewDealsRoute } from './components/routes'
 import { LoginRoute } from './components/routes'
 
-import logo from './assets/logo.png'
 import './App.css'
 
 class App extends Component {
@@ -15,9 +14,6 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <div className="top-logo">
-            <img src={logo} alt="logo"/>        
-          </div>
           <Route
             exact
             path={'/'}
