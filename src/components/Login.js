@@ -4,14 +4,13 @@ import DealStore from './stores/DealStore'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import './Login.css'
-import logoTitle from '../assets/FreshSpire-Brandmark_Logotype-Green.png';
-
+import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
 export default class Login extends Component {
   state = {
-
+		  
   }
-
+  
   render() {
     const { deals } = this.state
     return (
@@ -24,7 +23,7 @@ export default class Login extends Component {
 	      	<label>Username <input type="text"/></label>
 	      </div>
 		  <div className="login-credentials">
-		    <label>Password <input type="text"/></label>
+		    <label>Password <input type="password"/></label>
 		  </div>
 		  <div className="btn-submit">
 		    <input type="button" value="Login" />
