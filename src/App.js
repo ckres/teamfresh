@@ -15,9 +15,6 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <div className="top-logo">
-            <img src={logo} alt="logo"/>        
-          </div>
           <Route
             exact
             path={'/'}

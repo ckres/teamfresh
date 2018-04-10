@@ -5,7 +5,7 @@ import DealStore from './stores/DealStore'
 
 
 import './SignUp.css'
-import logoTitle from '../assets/logo.png';
+import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Mono.png';
 
 export default class SignUp extends Component {
   state = {
@@ -16,20 +16,25 @@ export default class SignUp extends Component {
     const { deals } = this.state
     return (
       <div className="SignUp-container">
+          <img src={logoTitle} alt="FreshSpire" className="img-format"/>
+          <p className="caption-content">Optimizing food distribution, one community at a time.</p>
 	      <div className="SignUp-context">
-	      	<input type="text" placeholder="Username"/>
+	      	<label>Username <input type="text"/></label>
 	      </div>
 		  <div className="SignUp-context">
-		    <input type="text" placeholder="Password"/>
+		    <label>Password <input type="password"/></label>
 		  </div>
 		  <div className="SignUp-context">
-		    <input type="text" placeholder="Email"/>
+		    <label>Repeat Password <input type="password"/></label>
 		  </div>
 		  <div className="SignUp-context">
-		    <input type="text" placeholder="Phone number"/>
+		    <label>Email <input type="text"/></label>
 		  </div>
 		  <div className="SignUp-context">
-		    <input type="text" placeholder="Address"/>
+		    <label> Phone # <input type="text"/></label>
+		  </div>
+		  <div className="SignUp-context">
+		    <label>Address <input type="text"/></label>
 		  </div>			  		  
 		  <div className="btn-submit">
 		    <input type="button" value="Sign Up"/>
