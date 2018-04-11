@@ -1,0 +1,62 @@
+.login-container {
+  font-family: 'MuseoSans300', 'sans-serif';
+  .login-credentials {
+    display: flex;
+    justify-content: center;
+
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid #3DD28F;
+      font-size: 1rem;
+      position: relative;
+      top: -3em;
+	  	
+		    
+    }
+    label {
+      width: 6em;
+      margin-right: 6.5em;
+      padding-top: 1.5em;
+      color: #3DD28F;
+    }
+  }
+
+  .btn-submit {
+    margin: 1rem 0 0rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      padding: 0 0.8rem;
+      margin-right: 0.5rem;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      box-shadow: 0 0.3rem 1rem #e8e8e8;
+      background-color: #3DD28F;
+      width: 90px;
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+  
+  .img-format {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 575px;
+  }
+  
+  .example-appear {
+    opacity: 0.01;
+  }
+	
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 3s ease-in;
+  }
+}
