@@ -20,6 +20,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.project
+
+# eclipse-settings
+.settings/.jsdtscope
+.settings/org.eclipse.wst.jsdt.ui.superType.*
+
 *.css
 src/**/*.css
 /.project

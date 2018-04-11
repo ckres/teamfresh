@@ -5,9 +5,10 @@ import {
   Route
 } from 'react-router-dom'
 import { ViewDealsRoute } from './components/routes'
-import { SignUpRoute } from './components/routes'
 
-import logo from './assets/logo.png'
+import { LoginRoute } from './components/routes'
+
+
 import './App.css'
 
 class App extends Component {
@@ -19,15 +20,21 @@ class App extends Component {
             exact
             path={'/'}
             render={() => {
-              // default go to homepage
-              return <Redirect to={'/deals'} />
+              //default go to homepage
+              return <Redirect to={'/login'} />
             }}
           />
-          <Route
+            <Route
+            exact
+            path={'/login'}
+            render={() => {
+              return <LoginRoute />
+            }}
+          />
+            <Route
             exact
             path={'/deals'}
             render={() => {
-              // default go to homepage
               return <ViewDealsRoute />
             }}
           />
