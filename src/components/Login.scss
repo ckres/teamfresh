@@ -2,31 +2,31 @@
   font-family: 'MuseoSans300', 'sans-serif';
   .login-credentials {
     display: flex;
-	justify-content: center;
+    justify-content: center;
 
     input {
-	    background: transparent;
-	    border: none;
-	    border-bottom: 3px solid #3DD28F;
-	    font-size: 1rem;
-	  	position: relative;
-	  	top: -3em;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid #3DD28F;
+      font-size: 1rem;
+      position: relative;
+      top: -3em;
 	  	
 		    
     }
     label {
-	  width: 6em;
-	  margin-right: 6.5em;
-	  padding-top: 1.5em;
-	  color: #3DD28F;
-	}
+      width: 6em;
+      margin-right: 6.5em;
+      padding-top: 1.5em;
+      color: #3DD28F;
+    }
   }
 
   .btn-submit {
     margin: 1rem 0 0rem 0;
     display: flex;
     align-items: center;
-	justify-content: center;
+    justify-content: center;
 
     input {
       padding: 0 0.8rem;
@@ -50,12 +50,13 @@
     margin-right: auto;
     width: 575px;
   }
+  
   .example-appear {
-	opacity: 0.01;
+    opacity: 0.01;
   }
 	
   .example-appear.example-appear-active {
-	opacity: 1;
-	transition: opacity 3s ease-in;
+    opacity: 1;
+    transition: opacity 3s ease-in;
   }
 }
