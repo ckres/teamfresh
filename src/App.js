@@ -5,7 +5,9 @@ import {
   Route
 } from 'react-router-dom'
 import { ViewDealsRoute } from './components/routes'
+
 import { LoginRoute } from './components/routes'
+
 
 import './App.css'
 
@@ -34,6 +36,14 @@ class App extends Component {
             path={'/deals'}
             render={() => {
               return <ViewDealsRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/signup'}
+            render={() => {
+              // default go to homepage
+              return <SignUpRoute />
             }}
           />
         </div>
