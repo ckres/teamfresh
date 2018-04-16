@@ -1,7 +1,15 @@
 .SignUp-container {
   font-family: 'MuseoSans300', 'sans-serif';
-  overflow-x: hidden;
+  background-image: url('../assets/Cover.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: -15px;
+  position: fixed;
+  display:table-cell;
+  object-fit: contain;
+  height: 100%;
   width: 100%;
+  overflow-x: hidden;
   padding-bottom: 150px;
   .SignUp-context {
     display: flex;
@@ -10,18 +18,28 @@
     input {
 	  background: transparent;
 	  border: none;
-	  border-bottom: 3px solid;
+	  border-bottom: 3px solid #3DD28F;
+	  color: #808080;
 	  font-size: 1rem;
 	  position: relative;
-	  top: -3em;
-	  	
-		    
+	  top: -3em;	    
     }
+    
     label {
 	  width: 8em;
 	  margin-right: 4.5em;
 	  padding-top: 1.5em;
+	  color: #3DD28F;
 	}
+  }
+
+  .sign-up-wrapper {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 25px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 40%;
+    margin-left: 40%;
   }
 
   .btn-submit {
@@ -37,7 +55,7 @@
       border-radius: 0.5rem;
       height: 2.5rem;
       box-shadow: 0 0.3rem 1rem #e8e8e8;
-      background-color: #000000;
+      background-color: #3DD28F;
       width: 90px;
       color: white;
       border: none;
