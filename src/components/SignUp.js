@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 
 import './SignUp.css'
-import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Mono.png';
+import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
 export default class SignUp extends Component {
   state = {
@@ -13,11 +13,11 @@ export default class SignUp extends Component {
   render() {
     return (
       <div className="SignUp-container">
+          <div className="sign-up-wrapper">
 				<img src={logoTitle} alt="FreshSpire" className="img-format"/>
-				<p className="caption-content">Optimizing food distribution, one community at a time.</p>
-	      <div className="SignUp-context">
-	      	<label>Username <input type="text"/></label>
-	      </div>
+	            <div className="SignUp-context">
+	      	        <label>Username <input type="text"/></label>
+	            </div>
 				<div className="SignUp-context">
 					<label>Password <input type="password"/></label>
 				</div>
@@ -28,14 +28,24 @@ export default class SignUp extends Component {
 					<label>Email <input type="text"/></label>
 				</div>
 				<div className="SignUp-context">
-					<label> Phone # <input type="text"/></label>
+					<label> Phone # <input type="tel"/></label>
 				</div>
 				<div className="SignUp-context">
-					<label>Address <input type="text"/></label>
-				</div>			  		  
+					<label>Street Address <input type="text"/></label>
+				</div>
+				<div className="SignUp-context">
+				    <label>City <input type="text"/></label>
+			    </div>
+			    <div className="SignUp-context">
+			        <label>State <input type="text"/></label>
+		        </div>
+		        <div className="SignUp-context">
+			        <label>ZIP <input type="text"/></label>
+		        </div>	
 				<div className="btn-submit">
 					<input type="button" value="Sign Up"/>
 				</div>
+			</div>	
       </div>
     )
   }
