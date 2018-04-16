@@ -3,26 +3,35 @@
   "version": "0.0.1",
   "homepage": "http://ckres.github.io/teamfresh",
   "scripts": {
-    "start-js": "PORT=3007 react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
+    "start-js": "PORT=3007 react-app-rewired start",
     "build": "npm-run-all build-css build-js",
+    "build-js": "react-app-rewired build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-app-rewired start test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "dependencies": {
-    "gh-pages": "^1.1.0",
-    "node-sass-chokidar": "^1.2.0",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-background-image-loader": "0.0.5",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "store": "^2.0.12"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.6.7",
+    "react-app-rewire-mobx": "^1.0.7",
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "react-app-rewired": "^1.5.0"
   }
 }

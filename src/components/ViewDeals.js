@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 import { SearchIcon, LocationIcon } from './Icons'
-import DealStore from './stores/DealStore'
 
 import './ViewDeals.css'
 import logo from '../assets/logo.png'
 
+@observer
+@inject('dealStore')
 export default class ViewDeals extends Component {
   state = {
     isLoadingDeals: true,
@@ -12,7 +14,9 @@ export default class ViewDeals extends Component {
   }
 
   componentDidMount() {
-    DealStore.getDeals().then((deals) => {
+    const { dealStore } = this.props
+
+    dealStore.getDeals().then((deals) => {
       this.setState({ deals })
     })
   }

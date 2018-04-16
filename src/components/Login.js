@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 import { withRouter } from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { ROUTES } from '../' 
 
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
+@observer
+@inject('userStore')
 class Login extends Component {
   state = {
     username: null,
@@ -22,8 +24,11 @@ class Login extends Component {
 
   onLogin = () => {
     const { history } = this.props
+    const { username, password } = this.state
     
-    history.push('/deals')
+    this.props.userStore.login(username, password).then(() => {
+      history.push('/deals')
+    })
   }
   
   render() {
