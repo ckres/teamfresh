@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
@@ -52,7 +52,7 @@ class Login extends Component {
             />
           </div>
           <div className="btn-submit">
-            <input type="button" value="Sign Up"/>
+            <Link to={'/signup'}><input type="button" value="Sign Up"/></Link>
           </div>
       </div>
     )
