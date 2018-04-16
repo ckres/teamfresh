@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { ROUTES } from '../' 
 
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
@@ -29,13 +27,6 @@ class Login extends Component {
   render() {
     return (
       <div className="login-container">
-        <ReactCSSTransitionGroup
-          transitionName="example"
-          transitionAppear={true}
-          transitionAppearTimeout={3000}
-          transitionEnterTimeout={0}
-          transitionLeaveTimeout={0}
-        >
           <img src={logoTitle} alt="FreshSpire" className="img-format"/>
           <div className="login-credentials">
             <label>Username
@@ -63,7 +54,6 @@ class Login extends Component {
           <div className="btn-submit">
             <input type="button" value="Sign Up"/>
           </div>
-        </ReactCSSTransitionGroup>
       </div>
     )
   }
