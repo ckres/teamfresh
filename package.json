@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "http://ckres.github.io/teamfresh",
   "scripts": {
-    "start-js": "react-scripts start",
+    "start-js": "PORT=3007 react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
