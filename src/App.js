@@ -11,8 +11,8 @@ import PrivateRoute from './components/PrivateRoute'
 import './App.css'
 import UserStore from './stores/UserStore';
 
-@observer
 @inject('userStore')
+@observer
 class App extends Component {
   componentDidMount() {
     this.props.userStore.initUser()
@@ -37,7 +37,7 @@ class App extends Component {
               return <LoginRoute />
             }}
           />
-          <PrivateRoute
+          <Route
             exact
             path={'/deals'}
             component={ViewDealsRoute}

@@ -6,8 +6,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
-@observer
 @inject('userStore')
+@observer
 class Login extends Component {
   state = {
     username: null,
@@ -37,7 +37,7 @@ class Login extends Component {
         <ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}
-          transitionAppearTimeout={3000}
+          transitionAppearTimeout={1000}
           transitionEnterTimeout={0}
           transitionLeaveTimeout={0}
         >

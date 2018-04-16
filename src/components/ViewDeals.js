@@ -5,8 +5,8 @@ import { SearchIcon, LocationIcon } from './Icons'
 import './ViewDeals.css'
 import logo from '../assets/logo.png'
 
-@observer
 @inject('dealStore')
+@observer
 export default class ViewDeals extends Component {
   state = {
     isLoadingDeals: true,
