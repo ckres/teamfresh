@@ -2,7 +2,7 @@
   font-family: 'MuseoSans300', 'sans-serif';
   background-image: url('../assets/Cover.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
   margin: -15px;
   position: fixed;
   display:table-cell;
@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  padding-bottom: 150px;
+  padding-bottom: auto;
   .SignUp-context {
     display: flex;
 	justify-content: center;
@@ -36,10 +36,12 @@
   .sign-up-wrapper {
     background-color: rgba(255, 255, 255, 0.65);
     border-radius: 25px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-right: 40%;
-    margin-left: 40%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    height: 51rem;
   }
 
   .btn-submit {
