@@ -14,7 +14,6 @@ export default class SignUp extends Component {
     return (
       <div className="SignUp-container">
 				<img src={logoTitle} alt="FreshSpire" className="img-format"/>
-				<p className="caption-content">Optimizing food distribution, one community at a time.</p>
 	      <div className="SignUp-context">
 	      	<label>Username <input type="text"/></label>
 	      </div>
