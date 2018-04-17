@@ -1,0 +1,100 @@
+.Profile-container {
+  font-family: 'MuseoSans300', 'sans-serif';
+  background-image: url('../assets/Cover.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: -15px;
+  position: fixed;
+  display:table-cell;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: auto;
+  .Profile-context {
+    display: flex;
+	justify-content: center;
+
+    input {
+	  background: transparent;
+	  border: none;
+	  border-bottom: 3px solid #3DD28F;
+	  color: #808080;
+	  font-size: 1rem;
+	  position: relative;
+	  top: -3em;	    
+    }
+    
+    p {
+	  width: 25em;
+	  margin-right: 4.5em;
+	  padding-top: 2em;
+	  color: #3DD28F;
+	  }
+
+    Userdata {
+    width: 8em;
+    padding-top: 1.5em;
+    color: rgb(120, 120, 120);
+    }
+
+  }
+
+
+
+  .profile-wrapper {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 25px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    height: 51rem;
+  }
+
+  .btn-submit {
+    padding: 6px;
+    margin: 1rem 0 0rem 0;
+    display: flex;
+    align-items: auto;
+	justify-content: center;
+	padding-bottom: 2em;
+
+    input {
+      padding: 0 0.8rem;
+      margin-right: 0.5rem;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      box-shadow: 0 0.3rem 1rem #e8e8e8;
+      background-color: #3DD28F;
+      width: auto 90px;
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+  
+  .img-format {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .avatar {
+    margin-left: 25%;
+    margin-right: auto;
+    border-radius: 70%;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+    border: 2px solid rgb(120, 120, 120);
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

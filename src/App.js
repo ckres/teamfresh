@@ -4,7 +4,7 @@ import {
   Redirect,
   Route
 } from 'react-router-dom'
-import { ViewDealsRoute, SignUpRoute, LoginRoute } from './components/routes'
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute} from './components/routes'
 
 import './App.css'
 
@@ -41,6 +41,13 @@ class App extends Component {
             render={() => {
               // default go to homepage
               return <SignUpRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/profile'}
+            render={() => {
+              return <ProfileRoute />
             }}
           />
         </div>
