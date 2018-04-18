@@ -5,6 +5,8 @@ import DealStore from './stores/DealStore'
 import './ViewDeals.css'
 import logo from '../assets/logo.png'
 
+import Popup from 'reactjs-popup'
+
 export default class ViewDeals extends Component {
   state = {
     isLoadingDeals: true,
@@ -39,6 +41,45 @@ export default class ViewDeals extends Component {
               <div className="deal-name">{name}</div>
               <div className="deal-price">
                 {`$${price}/${unit}`}&nbsp;<span className="deal-price_before">(was ${price_before})</span>
+              </div>
+              <div className="deal-more-details">
+              <Popup trigger={<button className="button"> More Details </button>} modal>
+                {close => (
+                  <div>
+                    <a className="close" onClick={close}>
+                      &times;
+                    </a>
+                    <div className="header"> Deal Info </div>
+                    <div className="content">
+                      {" "}
+                      <div><strong>Product Name/Type: </strong>{name}</div>
+                      <br />
+                      <div>
+                        <strong>Distance to Distributor:</strong>  {distance} m
+                      </div>
+                      <br/>
+                      <div>
+                        <strong>Price per unit:</strong> ${price}
+                      </div>
+                      <br/>
+                      <div>
+                        <strong>Quantity Available:</strong> 236 lbs
+                      </div>
+                      <br/>
+                      <div>
+                        <strong>Best Before:</strong> 05/15/2018
+                      </div>
+                      </div>
+                    <div className="btn-submit">
+                      <input type="button" value="Add to Cart"/>
+                      <input type="button" value="Back" onClick={() => {
+                          console.log('modal closed ')
+                          close()
+                        }}/>
+                    </div>
+                  </div>
+              )}
+            </Popup>
               </div>
             </div>
           </div>
