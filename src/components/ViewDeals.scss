@@ -31,6 +31,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    .no-deals {
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
     .deal-item {
       margin-bottom: 1rem;
       &:nth-child(odd) {
@@ -83,4 +87,22 @@
       }
     }
   }
+  .deal-modal-container {
+    // line-height: 1.5rem;
+  }
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  // background-image: url('../assets/modal-background.jpg') !important;
+  background-size: contain !important;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
 }

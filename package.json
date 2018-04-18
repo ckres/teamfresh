@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "http://ckres.github.io/teamfresh",
   "scripts": {
-    "start-js": "react-scripts start",
+    "start-js": "PORT=3006 react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
@@ -22,6 +22,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-background-image-loader": "0.0.5",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.4.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1"
   }
