@@ -1,3 +1,5 @@
+import { action, observable, computed } from 'mobx'
+
 const mockedData = {
   deals: [
     {
@@ -39,12 +41,19 @@ const mockedData = {
   ]
 }
 
-export default class DealStore {
-  static getDeals() {
-    return new Promise((resolve, reject) => {
+class DealStore {
+  @observable
+  deals = null
+
+  @action
+  getDeals() {
+    return this.deals ? Promise.resolve(this.deals) : new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(mockedData.deals)
+        this.deals = mockedData.deals
       }, 1000)
     })
   }
 }
+
+export default new DealStore()
