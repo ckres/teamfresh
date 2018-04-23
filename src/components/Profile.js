@@ -87,6 +87,8 @@ render() {
 			</div>
 	        <div className="Profile-context">
 		        <p>Previous Order: </p>
+	        </div>	
+	        <div className="Profile-context">
 		        <ul>
 			        <li>Red Gala Apples</li>
 			        <li>Ladyfinger Bananas</li>
