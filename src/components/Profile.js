@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 
 import './Profile.css'
 import logo from '../assets/logo.png'
@@ -54,7 +54,7 @@ render() {
 				    	<input type="button" value="Profile"/>
 				    </div></li>
 				    <li><div className="btn-submit" style={{zIndex:200}}>
-						<input type="button" value="View Deals"/>
+						<Link to={'/deals'}><input type="button" value="View Deals"/></Link>
 					</div></li>
 				    <li><div className="btn-submit" style={{zIndex:200}}>
 						<input type="button" value="Shopping Cart"/>
