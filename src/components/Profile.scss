@@ -1,0 +1,126 @@
+.Profile-container {
+  background-color: #F0F0F0;
+  font-family: 'MuseoSans300', 'sans-serif';
+  margin: -15px;
+  position: fixed;
+  display:table-cell;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: auto;
+
+  .btn-primary {
+  border: none;
+  background: none;
+  }
+
+  .background-circle {
+    background-color: rgba(240, 240, 240,1);
+    position: fixed;
+    margin: 0 1em 1em 0;
+    height: 50%;
+    width: 100%;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    box-shadow: 0 0.3rem 1rem #cacaca;
+   }
+  .top-logo {
+    margin-top: 5%;
+    text-align: center;
+    img {
+      position: relative;
+      width: 4rem;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 100%;
+      box-shadow: 0 0.3rem 1rem #cacaca;
+    }
+    .dropdown-menu {
+    position: fixed;
+    top: 12%;
+    display: flex;
+    margin-left: 25%;
+    justify-content: center;
+    }
+  }
+  .Profile-context {
+    display: block;
+    text-align: center;
+  }
+  .edit-context {
+    strong {
+      color: #4c4c4c;
+    }
+    .myLabelClass{
+    }
+    .myInputClass{
+      font-size: 20px;
+      color: rgb(120, 120, 120);
+    }
+    display: flex;
+    color: rgb(120, 120, 120);
+    margin-left: 10%;
+    padding-top: 2em;
+  }
+
+  .profile-wrapper {
+    background-image: url('../assets/Cover.jpg');
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 10rem;
+
+    text-align: center;
+
+    .avatar {
+    margin-top: 5%;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #3DD28F;
+    img {
+      width: auto;
+      height: 150px;
+    }
+    }
+  }
+
+  .btn-submit {
+    position: relative;
+    margin: 1rem 0 0rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 400;
+
+    input {
+      padding: 0 0.8rem;
+      margin-right: 0.5rem;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      box-shadow: 0 0.3rem 1rem #e8e8e8;
+      background-color: #3DD28F;
+      width: 130px;
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+  
+  .img-format {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+  }
+
+}
