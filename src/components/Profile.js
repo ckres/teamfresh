@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import EditableLabel from 'react-inline-editing'
 import './Profile.css'
 import logo from '../assets/logo.png'
 
@@ -19,6 +19,17 @@ constructor(props){
     this.doSomething = this.doSomething.bind(this);
     this.toggleShow = this.toggleShow.bind(this);
     this.hide = this.hide.bind(this);
+
+    this._handleFocus = this._handleFocus.bind(this);
+    this._handleFocusOut = this._handleFocusOut.bind(this);
+}
+
+_handleFocus(text) {
+    console.log('Focused with text: ' + text);
+}
+ 
+_handleFocusOut(text) {
+    console.log('Left editor with text: ' + text);
 }
 
 doSomething(e){
@@ -73,31 +84,55 @@ render() {
 	      	        <img src='https://seeklogo.com/images/O/organic-restaurant-logo-D34AC3E788-seeklogo.com.png' alt="profilePhoto" /> 
 	            </div>
 		    </div>
-			<div className="Profile-context">
-				<p><strong>User Name:</strong> Avatar</p>
+			<div className="edit-context">
+				<strong>User Name:</strong>
+				<EditableLabel text=' Avatar'
+                labelClassName='myLabelClass'
+                inputClassName='myInputClass'
+                inputMaxLength={50}
+                onFocus={this._handleFocus}
+                onFocusOut={this._handleFocusOut}
+            	/>
 			</div>
-			<div className="Profile-context">
-				<p><strong>Email: </strong>Avatar@gmail.com</p>
+			<div className="edit-context">
+				<strong>Email: </strong>
+				<EditableLabel text=' Avatar@gmail.com'
+                labelClassName='myLabelClass'
+                inputClassName='myInputClass'
+                inputMaxLength={50}
+                onFocus={this._handleFocus}
+                onFocusOut={this._handleFocusOut}
+            	/>
 			</div>
-			<div className="Profile-context">
-				<p><strong>Phone: </strong>201-938-0483</p>
+			<div className="edit-context">
+				<strong>Phone: </strong>
+				<EditableLabel text=' 201-938-0483'
+                labelClassName='myLabelClass'
+                inputClassName='myInputClass'
+                inputMaxLength={50}
+                onFocus={this._handleFocus}
+                onFocusOut={this._handleFocusOut}
+            	/>
 			</div>
-			<div className="Profile-context">
-				<p><strong>Address: </strong> Wolf Ridge 1655 Raleigh NC 27606</p>
+			<div className="edit-context">
+				<strong>Address: </strong>
+				<EditableLabel text=' Wolf Ridge 1655 Raleigh NC 27606'
+                labelClassName='myLabelClass'
+                inputClassName='myInputClass'
+                inputMaxLength={100}
+                onFocus={this._handleFocus}
+                onFocusOut={this._handleFocusOut}
+            	/>
 			</div>
-	        <div className="Profile-context">
-		        <p><strong>Previous Order: </strong></p>
+	        <div className="edit-context">
+		        <strong>Previous Order: </strong>
 	        </div>	
-	        <div className="Profile-context">
+	        <div className="edit-context">
 		        <ul>
 			        <li>Red Gala Apples</li>
 			        <li>Ladyfinger Bananas</li>
 			    </ul>
 	        </div>		      		
-			<div className="btn-submit">
-				<input type="button" value="Edit"/>
-			</div>
-			
 	  </div>
 	)
   }

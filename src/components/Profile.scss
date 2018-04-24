@@ -50,16 +50,6 @@
   .Profile-context {
     display: flex;
 
-    input {
-	  background: transparent;
-	  border: none;
-	  border-bottom: 3px solid #3DD28F;
-	  color: #808080;
-	  font-size: 1rem;
-	  position: relative;
-	  top: -3em;	    
-    }
-    
     strong {
       color: #4c4c4c;
     }
@@ -78,8 +68,27 @@
     }
 
   }
-  
+  .edit-context {
+    strong {
+      color: #4c4c4c;
+    }
+    .myLabelClass{
+    }
+    .myInputClass{
+      font-size: 20px;
+      color: rgb(120, 120, 120);
+    }
+    display: flex;
+    color: rgb(120, 120, 120);
+    margin-left: 10%;
+    padding-top: 2em;
 
+    ul {
+    margin-left: 10%;
+    width: 40em;
+    color: rgb(120, 120, 120);
+    }
+  }
 
   .profile-wrapper {
     background-image: url('../assets/Cover.jpg');
@@ -136,6 +145,5 @@
     width: 100%;
     max-width: 450px;
   }
-
 
 }
