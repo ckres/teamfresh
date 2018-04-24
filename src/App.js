@@ -5,8 +5,7 @@ import {
   Redirect,
   Route
 } from 'react-router-dom'
-
-import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute} from './components/routes'
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute } from './components/routes'
 import PrivateRoute from './components/PrivateRoute'
 
 
@@ -50,6 +49,14 @@ class App extends Component {
             render={() => {
               // default go to homepage
               return <SignUpRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/shoppingcart'}
+            render={() => {
+              // default go to homepage
+              return <ShoppingCartRoute />
             }}
           />
           <Route
