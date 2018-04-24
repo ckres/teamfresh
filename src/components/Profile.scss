@@ -49,7 +49,6 @@
   }
   .Profile-context {
     display: flex;
-	  justify-content: center;
 
     input {
 	  background: transparent;
@@ -61,10 +60,13 @@
 	  top: -3em;	    
     }
     
+    strong {
+      color: #4c4c4c;
+    }
     p {
     margin-left: 10%;
     padding: 1px;
-	  width: 40em;
+	  width: 15em;
 	  padding-top: 2em;
 	  color: rgb(120, 120, 120);
 	  }
@@ -91,7 +93,7 @@
 
     .avatar {
     margin-top: 5%;
-    border-radius: 80%;
+    border-radius: 50%;
     text-align: center;
     overflow: hidden;
     display: inline-block;

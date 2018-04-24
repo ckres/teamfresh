@@ -70,23 +70,23 @@ render() {
 			</div>
 		    <div className="profile-wrapper">
 	            <div className="avatar">
-	      	        <img src='http://lorempixel.com/500/500/people' alt="profilePhoto" /> 
+	      	        <img src='https://seeklogo.com/images/O/organic-restaurant-logo-D34AC3E788-seeklogo.com.png' alt="profilePhoto" /> 
 	            </div>
 		    </div>
 			<div className="Profile-context">
-				<p>User Name: Avatar</p>
+				<p><strong>User Name:</strong> Avatar</p>
 			</div>
 			<div className="Profile-context">
-				<p>Email: Avatar@gmail.com</p>
+				<p><strong>Email: </strong>Avatar@gmail.com</p>
 			</div>
 			<div className="Profile-context">
-				<p>Phone: 201-938-0483</p>
+				<p><strong>Phone: </strong>201-938-0483</p>
 			</div>
 			<div className="Profile-context">
-				<p>Address:  Wolf Ridge 1655 Raleigh NC 27606</p>
+				<p><strong>Address: </strong> Wolf Ridge 1655 Raleigh NC 27606</p>
 			</div>
 	        <div className="Profile-context">
-		        <p>Previous Order: </p>
+		        <p><strong>Previous Order: </strong></p>
 	        </div>	
 	        <div className="Profile-context">
 		        <ul>
@@ -95,7 +95,7 @@ render() {
 			    </ul>
 	        </div>		      		
 			<div className="btn-submit">
-				<input type="button" value="Edit Profile"/>
+				<input type="button" value="Edit"/>
 			</div>
 			
 	  </div>
