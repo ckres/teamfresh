@@ -1,25 +1,64 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 import { SearchIcon, LocationIcon } from './Icons'
-import DealStore from './stores/DealStore'
 
 import './ViewDeals.css'
 import logo from '../assets/logo.png'
 
+@inject('dealStore')
+@observer
 export default class ViewDeals extends Component {
   state = {
     isLoadingDeals: true,
-    deals: null
+    deals: null,
+    dealSearchQuery: '',
   }
 
   componentDidMount() {
-    DealStore.getDeals().then((deals) => {
+    const { dealStore } = this.props
+
+    dealStore.getDeals().then((deals) => {
       this.setState({ deals })
+    })
+  }
+
+  onDealSearchQueryChange = (e) => {
+    this.setState({
+      dealSearchQuery: e.target.value
     })
   }
   
   getDealItems() {
-    const { deals } = this.state
-    return deals.map((deal, i) => {
+    const { deals, dealSearchQuery } = this.state
+    let filteredDeals
+
+    // use regex instead
+    if (dealSearchQuery.includes('<') || dealSearchQuery.includes('>')) {
+      const isLessThan = !!dealSearchQuery.includes('<')
+      filteredDeals = deals.filter((deal) => {
+        const { price } = deal
+        return isLessThan
+          ? price < parseFloat(dealSearchQuery.replace(/<|>/g, ''))
+          : price > parseFloat(dealSearchQuery.replace(/<|>/g, ''))
+      })
+    } else {
+      filteredDeals = deals.filter((deal) => {
+        const { name } = deal
+  
+        return name.toLowerCase().includes(dealSearchQuery.toLowerCase())
+      })
+    }
+
+
+    if (filteredDeals.length === 0) {
+      return (
+        <li className="no-deals">
+          Sorry, there is no deal that satisfies what you've searched...
+        </li>
+      )
+    }
+
+    return filteredDeals.map((deal, i) => {
       const { name, price, price_before, unit, distance, distributor, thumbnail } = deal
       return (
         <li
@@ -55,7 +94,10 @@ export default class ViewDeals extends Component {
           <img src={logo} alt="logo"/>
         </div>
         <div className="deals-search">
-          <input type="text" />
+          <input
+            type="text"
+            onChange={this.onDealSearchQueryChange}
+          />
           <SearchIcon color="gray" />
         </div>
         {

@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 import { 
   HashRouter as Router,
   Redirect,
   Route
 } from 'react-router-dom'
+
 import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute} from './components/routes'
+import PrivateRoute from './components/PrivateRoute'
+
 
 import './App.css'
+import UserStore from './stores/UserStore';
 
+@inject('userStore')
+@observer
 class App extends Component {
+  componentDidMount() {
+    this.props.userStore.initUser()
+  }
+
   render() {
     return (
       <Router>
@@ -21,19 +32,17 @@ class App extends Component {
               return <Redirect to={'/login'} />
             }}
           />
-            <Route
+          <Route
             exact
             path={'/login'}
             render={() => {
               return <LoginRoute />
             }}
           />
-            <Route
+          <Route
             exact
             path={'/deals'}
-            render={() => {
-              return <ViewDealsRoute />
-            }}
+            component={ViewDealsRoute}
           />
           <Route
             exact
