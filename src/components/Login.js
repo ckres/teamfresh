@@ -30,33 +30,35 @@ class Login extends Component {
   render() {
     return (
       <div className="login-container">
-          <img src={logoTitle} alt="FreshSpire" className="img-format"/>
-          <div className="login-credentials">
-            <label>Username
-              <input 
-                type="text"
-                onChange={this.onUsernameChange}
-              />
-            </label>
-          </div>
-          <div className="login-credentials">
-            <label>Password
-              <input
-                type="password"
-                onChange={this.onPasswordChange}
-              />
-            </label>
-          </div>
-          <div className="btn-submit">
-            <input 
-              type="button"
-              value="Login"
-              onClick={this.onLogin}
-            />
-          </div>
-          <div className="btn-submit">
-            <Link to={'/signup'}><input type="button" value="Sign Up"/></Link>
-          </div>
+      	<div className="login-wrapper">
+	          <img src={logoTitle} alt="FreshSpire" className="img-format"/>
+	          <div className="login-credentials">
+	            <label>Username
+	              <input 
+	                type="text"
+	                onChange={this.onUsernameChange}
+	              />
+	            </label>
+	          </div>
+	          <div className="login-credentials">
+	            <label>Password
+	              <input
+	                type="password"
+	                onChange={this.onPasswordChange}
+	              />
+	            </label>
+	          </div>
+	          <div className="btn-submit">
+	            <input 
+	              type="button"
+	              value="Login"
+	              onClick={this.onLogin}
+	            />
+	          </div>
+	          <div className="btn-submit">
+	            <Link to={'/signup'}><input type="button" value="Sign Up"/></Link>
+	          </div>
+	     </div>
       </div>
     )
   }
