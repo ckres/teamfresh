@@ -48,24 +48,8 @@
     }
   }
   .Profile-context {
-    display: flex;
-
-    strong {
-      color: #4c4c4c;
-    }
-    p {
-    margin-left: 10%;
-    padding: 1px;
-	  width: 15em;
-	  padding-top: 2em;
-	  color: rgb(120, 120, 120);
-	  }
-    ul {
-    margin-left: 20%;
-    padding: 1px;
-    width: 40em;
-    color: rgb(120, 120, 120);
-    }
+    display: block;
+    text-align: center;
 
   }
   .edit-context {
@@ -82,12 +66,6 @@
     color: rgb(120, 120, 120);
     margin-left: 10%;
     padding-top: 2em;
-
-    ul {
-    margin-left: 10%;
-    width: 40em;
-    color: rgb(120, 120, 120);
-    }
   }
 
   .profile-wrapper {

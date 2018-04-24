@@ -116,7 +116,7 @@ render() {
 			</div>
 			<div className="edit-context">
 				<strong>Address: </strong>
-				<EditableLabel text=' Wolf Ridge 1655 Raleigh NC 27606'
+				<EditableLabel text=' Wolf Ridge 1655'
                 labelClassName='myLabelClass'
                 inputClassName='myInputClass'
                 inputMaxLength={100}
@@ -124,15 +124,21 @@ render() {
                 onFocusOut={this._handleFocusOut}
             	/>
 			</div>
-	        <div className="edit-context">
-		        <strong>Previous Order: </strong>
-	        </div>	
-	        <div className="edit-context">
-		        <ul>
-			        <li>Red Gala Apples</li>
-			        <li>Ladyfinger Bananas</li>
-			    </ul>
-	        </div>		      		
+			<div className="edit-context">
+				<strong>City/State/ZIP: </strong>
+				<EditableLabel text='Raleigh/NC/27606'
+                labelClassName='myLabelClass'
+                inputClassName='myInputClass'
+                inputMaxLength={100}
+                onFocus={this._handleFocus}
+                onFocusOut={this._handleFocusOut}
+            	/>
+			</div>
+	        <div className="Profile-context">
+		        <div className="btn-submit" >
+						<input type="button" value="Order History"/>
+				</div>
+	        </div>	      		
 	  </div>
 	)
   }
