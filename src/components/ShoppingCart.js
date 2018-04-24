@@ -72,22 +72,23 @@ export default class ShoppingCArt extends Component {
 		                	</div>
 		                    <div className="deal-name">{name}</div>
 		                    <div className="deal-price">
-		                    	{`$${price}/${unit}`}&nbsp;<span className="deal-price_before">(was ${price_before})</span>
+		                    	{`$${price}/${unit}`}&nbsp;<span className="deal-price_before"><br />(was ${price_before})</span>
 		                    </div>
 		                </td>
-            			<td>
-	            			<div className="purchased">
-	            				Amount Purchased : {amount_purchased}
-	            				</div>
-			                <div className="deal-delivery">Delivery Date : {delivery_date}</div>
+            			<td>	      
+	            			<div className="purchased"># Purchased: {amount_purchased}</div>
 			                <div className="deal-cost">
-			                	Total Cost : ${total_cost}
+			                	Total: ${total_cost}
 			                </div>
+			                <div className="deal-delivery">Delivery Date: {delivery_date}</div>
             			</td>
             		</tr>
             	</table>
                 </div>
             </div>
+            <div className="btn-basic">
+		      <input type="button" value="Delete"/>
+	        </div>
           </div>
         </li>
       )
@@ -132,6 +133,10 @@ export default class ShoppingCArt extends Component {
             {this.getDealItems()}
           </ul>
         }
+
+        <div className="btn-submit">
+	      <input type="button" value="Purchase"/>
+      </div>
       </div>
     )
   }

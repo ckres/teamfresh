@@ -14,11 +14,11 @@
   .SignUp-context {
     display: flex;
 	justify-content: center;
-  overflow-y: hidden;
+    overflow-y: hidden;
     input {
 	  background: transparent;
 	  border: none;
-	  width: 200%;
+	  width: 215%;
 	  border-bottom: 3px solid #3DD28F; //#36bc80 darker variation of freshspire green
 	  color: #808080;
 	  font-size: 1rem;
@@ -28,8 +28,8 @@
     
     label {
 	  width: 8em;
-	  margin-right: 8em;
-	  padding-top: 1.5em;
+	  margin-right: 9em;
+	  padding-top: 1.75em;
 	  color: #808080;
 	}
   }
@@ -42,8 +42,8 @@
     margin-left: auto;
     margin-right: auto;
     border: none;
-    width: 85%;
-    height: 54rem;
+    width: 90%;
+    height: 57rem;
   }
 
   .btn-submit {
