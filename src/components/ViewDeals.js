@@ -52,6 +52,7 @@ export default class ViewDeals extends Component {
                     <div className="header"> Deal Info </div>
                     <div className="content">
                       {" "}
+                      <img class="popup-image" src={thumbnail}/>
                       <div><strong>Product Name/Type: </strong>{name}</div>
                       <br />
                       <div>
@@ -72,10 +73,6 @@ export default class ViewDeals extends Component {
                       </div>
                     <div className="btn-submit">
                       <input type="button" value="Add to Cart"/>
-                      <input type="button" value="Back" onClick={() => {
-                          console.log('modal closed ')
-                          close()
-                        }}/>
                     </div>
                   </div>
               )}

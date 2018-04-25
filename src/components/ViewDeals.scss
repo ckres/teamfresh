@@ -111,6 +111,16 @@
               font-size: 18px;
               font-family: 'MuseoSans500';
               color: #4c4c4c;
+              align-items: center;
+              justify-content: center;
+              .popup-image {
+                padding: 0;
+                display: block;
+                margin: 0 auto;
+                margin-left: -0.3rem;
+                max-height: 100%;
+                max-width: 100%;
+              }
             }
             .btn-submit {
               margin: 1rem 0 0rem 0;
