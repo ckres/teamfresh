@@ -9,6 +9,9 @@ const mockedData = {
       price_before: 5.98,
       unit: 'bag',
       distance: 1.9,
+      delivery_date: '3/20/2018',
+      total_cost: 14.57,
+      amount_purchased: 12,
       distributor: 'wholefoodsmarket'
     },
     {
@@ -18,6 +21,9 @@ const mockedData = {
       price_before: 8.90,
       unit: 'bag',
       distance: 2.4,
+      delivery_date: '3/20/2018',
+      total_cost: 24.57,
+      amount_purchased: 5,
       distributor: 'mytraderjoeslist'
     },
     {
@@ -27,6 +33,9 @@ const mockedData = {
       price_before: 4.90,
       unit: 'bag',
       distance: 5.4,
+      delivery_date: '3/20/2018',
+      total_cost: 8.57,
+      amount_purchased: 10,
       distributor: 'wholefoodsmarket'
     },
     {
@@ -36,6 +45,9 @@ const mockedData = {
       price_before: 2.99,
       unit: 'bag',
       distance: 0.8,
+      delivery_date: '3/20/2018',
+      total_cost: 9.68,
+      amount_purchased: 10,
       distributor: 'foodlion'
     }
   ]

@@ -5,8 +5,9 @@ import {
   Redirect,
   Route
 } from 'react-router-dom'
-import { ViewDealsRoute, SignUpRoute, LoginRoute, HistoryRoute } from './components/routes'
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute } from './components/routes'
 import PrivateRoute from './components/PrivateRoute'
+
 
 import './App.css'
 import UserStore from './stores/UserStore';
@@ -55,6 +56,21 @@ class App extends Component {
             render={() => {
               // default go to homepage
               return <SignUpRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/shoppingcart'}
+            render={() => {
+              // default go to homepage
+              return <ShoppingCartRoute />
+            }}
+          />
+          <Route
+            exact
+            path={'/profile'}
+            render={() => {
+              return <ProfileRoute />
             }}
           />
         </div>
