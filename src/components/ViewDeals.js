@@ -14,6 +14,7 @@ export default class ViewDeals extends Component {
     isLoadingDeals: true,
     deals: null,
     dealSearchQuery: '',
+    searchQueryType: 'name',
   }
 
   componentDidMount() {
@@ -24,30 +25,43 @@ export default class ViewDeals extends Component {
     })
   }
 
-  onDealSearchQueryChange = (e) => {
+  searchIfPressEnter = (e) => {
+    if (e.key === 'Enter') {
+      this.onDealSearchQueryChange()
+    }
+  }
+
+  onDealSearchQueryChange = () => {
     this.setState({
-      dealSearchQuery: e.target.value
+      dealSearchQuery: this.searchQuery.value
+    })
+  }
+
+  onChangeSearchQueryType = (e) => {
+    this.setState({
+      searchQueryType: e.target.value
     })
   }
   
   getDealItems() {
-    const { deals, dealSearchQuery } = this.state
+    const { deals, dealSearchQuery, searchQueryType } = this.state
     let filteredDeals
 
     // use regex instead
     if (dealSearchQuery.includes('<') || dealSearchQuery.includes('>')) {
       const isLessThan = !!dealSearchQuery.includes('<')
+      const isPrice = searchQueryType === 'price' ? true : false
       filteredDeals = deals.filter((deal) => {
-        const { price } = deal
+        const { price, distance } = deal
         return isLessThan
-          ? price < parseFloat(dealSearchQuery.replace(/<|>/g, ''))
-          : price > parseFloat(dealSearchQuery.replace(/<|>/g, ''))
+          ? ((isPrice ? price : distance) < parseFloat(dealSearchQuery.replace(/<|>/g, '')))
+          : ((isPrice ? price : distance) > parseFloat(dealSearchQuery.replace(/<|>/g, '')))
       })
     } else {
       filteredDeals = deals.filter((deal) => {
-        const { name } = deal
+        const { name, location } = deal
   
-        return name.toLowerCase().includes(dealSearchQuery.toLowerCase())
+        return (searchQueryType === 'name' ? name : location).toLowerCase().includes(dealSearchQuery.toLowerCase())
       })
     }
 
@@ -61,7 +75,7 @@ export default class ViewDeals extends Component {
     }
 
     return filteredDeals.map((deal, i) => {
-      const { name, price, price_before, unit, distance, distributor, thumbnail } = deal
+      const { name, price, price_before, unit, distance, thumbnail } = deal
       return (
         <li
           key={i}
@@ -156,11 +170,23 @@ export default class ViewDeals extends Component {
       <div className="deals-container">
         <Menu />
         <div className="deals-search">
+          <select 
+            className="query-type-select"
+            onChange={this.onChangeSearchQueryType}
+          >
+            <option value="name">Name</option>
+            <option value="location">Location</option>
+            <option value="price">Price</option>
+            <option value="distance">Distance</option>
+          </select>
           <input
             type="text"
-            onChange={this.onDealSearchQueryChange}
+            ref={(searchQuery) => this.searchQuery = searchQuery}
+            onKeyPress={this.searchIfPressEnter}
           />
-          <SearchIcon color="gray" />
+          <span onClick={this.onDealSearchQueryChange}>
+            <SearchIcon color="gray" />
+          </span>
         </div>
         {
           deals &&

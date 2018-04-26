@@ -24,39 +24,6 @@
     border: none;
     background: none;
   }
-  .background-circle {
-    background: #FFFFFF;
-    position: fixed;
-
-    margin: 0 1em 1em 0;
-    height: 56%;
-    width: 100%;
-    border-bottom-left-radius: 60%;
-    border-bottom-right-radius: 60%;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    box-shadow: 0 0.3rem 1rem #cacaca;
-  }
-  .top-logo {
-    text-align: center;
-    
-    img {
-      position: relative;
-      width: 4rem;
-      background-color: #fff;
-      border-radius: 100%;
-      box-shadow: 0 0.3rem 1rem #cacaca;
-
-   }
-  }
-  .dropdown-menu {
-    position: fixed;
-    top: 13%;
-    display: flex;
-    margin-left: 24.2%;
-    justify-content: center;
-  }
 }
   
 .btn-submit {
@@ -81,7 +48,6 @@
     font-size: 1rem;
     cursor: pointer;
   }
-}
   .btn-basic {
     position: absolute;
     transform: translate(-50%, -130%);
@@ -179,5 +145,4 @@
       }
     }
   }
-}
 }
