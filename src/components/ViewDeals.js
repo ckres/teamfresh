@@ -73,7 +73,7 @@ export default class ViewDeals extends Component {
     }
 
     return filteredDeals.map((deal, i) => {
-      const { name, price, price_before, unit, distance, distributor, thumbnail } = deal
+      const { name, price, price_before, unit, distance, thumbnail } = deal
       return (
         <li
           key={i}

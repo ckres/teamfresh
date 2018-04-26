@@ -23,7 +23,7 @@ export default class ShoppingCart extends Component {
   getDealItems() {
     const { deals } = this.state
     return deals.map((deal, i) => {
-      const { name, price, price_before, unit, distance, delivery_date, delivery_time, total_cost, amount_purchased, distributor, thumbnail } = deal
+      const { name, price, price_before, unit, distance, delivery_date, delivery_time, total_cost, amount_purchased, thumbnail } = deal
       return (
         <li
           key={i}

@@ -1,11 +1,9 @@
 
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
-import { SearchIcon, LocationIcon } from './Icons'
 import './History.css'
 
 import logo from '../assets/logo.png'
-import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
 @inject('historyStore')
 @observer
@@ -54,7 +52,7 @@ export default class History extends Component {
 	  getHistoryItems() {
 	    const { history } = this.state
 	    return history.map((history, i) => {
-	      const { name, price, price_before, unit, distance, delivery_date, total_cost, amount_purchased, distributor, thumbnail, purchase_date } = history
+	      const { name, price, unit, delivery_date, total_cost, amount_purchased, thumbnail, purchase_date } = history
 	      return (
 	        <li
 	          key={i}
