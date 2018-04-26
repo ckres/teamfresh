@@ -2,51 +2,22 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './History.css'
-
-import logo from '../assets/logo.png'
+import Menu from './Menu'
 
 @inject('historyStore')
 @observer
 export default class History extends Component {
-
 	  state = {
-			  isLoadingHistory: true,
-			    history: null
-  }
-	  
-	  constructor(props){
-		    super(props);
-
-		    this.state = {
-		      show: false
-		    }
-		    this.doSomething = this.doSomething.bind(this);
-		    this.toggleShow = this.toggleShow.bind(this);
-		    this.hide = this.hide.bind(this);
-		  }
-
-		  doSomething(e){
-		    e.preventDefault();
-		    console.log(e.target.innerHTML);
-		  }
-
-		  toggleShow(){
-		    this.setState({show: !this.state.show});
-		  }
-
-		  hide(e){
-		    if(e && e.relatedTarget){
-		      e.relatedTarget.click();
-		    }
-		    this.setState({show: false});
-		  }
+			isLoadingHistory: true,
+			history: null
+		}
 		  
 	  componentDidMount() {
 		  const { historyStore } = this.props
 
-		    historyStore.getHistory().then((history) => {
-		      this.setState({ history })
-		    })
+			historyStore.getHistory().then((history) => {
+				this.setState({ history })
+			})
 	  }
 	  
 	  getHistoryItems() {
@@ -61,28 +32,29 @@ export default class History extends Component {
 	        >
 	          <div className="basket-item-container">
 	            <div className="basket-description">
-	            
 	            	<div className="information">
-	            	<table className="table">
-	            		<tr>
-	            			<td>
-			                    <div className="basket-name">{name}</div>
-			                    <div className="basket-price">
-			                    	{`$${price}/${unit}`}&nbsp;
-			                    </div>
-			                </td>
-	            			<td>	      
-	            				<div className="purchase-date">Date of Purchase: {purchase_date}</div>
-		            			<br />
-	            				<div className="purchased"># Purchased: {amount_purchased}</div>
-				                <div className="basket-cost">
-				                	Total: ${total_cost}
-				                </div>
-				                <div className="basket-delivery">Delivery Date: {delivery_date}</div>
-	            			</td>
-	            		</tr>
-	            	</table>
-	                </div>
+									<table className="table">
+										<tbody>
+											<tr>
+												<td>
+													<div className="basket-name">{name}</div>
+													<div className="basket-price">
+														{`$${price}/${unit}`}&nbsp;
+													</div>
+												</td>
+												<td>	      
+													<div className="purchase-date">Date of Purchase: {purchase_date}</div>
+													<br />
+													<div className="purchased"># Purchased: {amount_purchased}</div>
+													<div className="basket-cost">
+														Total: ${total_cost}
+													</div>
+													<div className="basket-delivery">Delivery Date: {delivery_date}</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 	            </div>
 	          </div>
 	        </li>
@@ -95,37 +67,7 @@ export default class History extends Component {
 	    return (
 	    
 	      <div className="baskets-container">
-	        <div className="top-logo" style={{zIndex:999}} >
-	        	<button className="btn-primary" type="button" onClick={this.toggleShow} onBlur={this.hide}>
-	        	<img src={logo} alt="logo" style={{zIndex:999}} />
-	        		<span className="caret"></span>
-	        	</button>       	
-	        <div className="dropdown-menu" >
-	        {
-	        	this.state.show &&
-	      (
-	        <ul className="dropdown-menu" style={{display: 'block'}}>
-	        <li><div className="btn-submit" style={{zIndex:200}}>
-	        	<input type="button" value="Profile"/>
-	        </div></li>
-	        <li><div className="btn-submit" style={{zIndex:200}}>
-	    		<input type="button" value="View Deals"/>
-	    	</div></li>
-	        <li><div className="btn-submit" style={{zIndex:200}}>
-	    		<input type="button" value="Shopping Cart"/>
-	    	</div></li>
-	        <li><div className="btn-submit" style={{zIndex:200}}>
-    		<input type="button" value="Order History"/>
-    		</div></li>
-	    	<li><div className="btn-submit" style={{zIndex:200}}>
-	    		<input type="button" value="Log Out"/>
-	    	</div></li>
-	    	<div className="background-circle" style={{zIndex:10}} ></div>
-	        </ul>
-	      )
-	      }
-	        </div>
-	        </div>
+	        <Menu />
 	        <br/><br/>
 	        <div className="header">
 	        	<label>Order History</label>
