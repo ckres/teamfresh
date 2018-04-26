@@ -58,18 +58,18 @@ export default class History extends Component {
 	      return (
 	        <li
 	          key={i}
-	          className="deal-item"
+	          className="basket-item"
 	          style={{ backgroundImage: `url(${thumbnail})` }}
 	        >
-	          <div className="deal-item-container">
-	            <div className="deal-description">
+	          <div className="basket-item-container">
+	            <div className="basket-description">
 	            
 	            	<div className="information">
 	            	<table className="table">
 	            		<tr>
 	            			<td>
-			                    <div className="deal-name">{name}</div>
-			                    <div className="deal-price">
+			                    <div className="basket-name">{name}</div>
+			                    <div className="basket-price">
 			                    	{`$${price}/${unit}`}&nbsp;
 			                    </div>
 			                </td>
@@ -77,10 +77,10 @@ export default class History extends Component {
 	            				<div className="purchase-date">Date of Purchase: {purchase_date}</div>
 		            			<br />
 	            				<div className="purchased"># Purchased: {amount_purchased}</div>
-				                <div className="deal-cost">
+				                <div className="basket-cost">
 				                	Total: ${total_cost}
 				                </div>
-				                <div className="deal-delivery">Delivery Date: {delivery_date}</div>
+				                <div className="basket-delivery">Delivery Date: {delivery_date}</div>
 	            			</td>
 	            		</tr>
 	            	</table>
@@ -96,7 +96,7 @@ export default class History extends Component {
 	  const { history } = this.state
 	    return (
 	    
-	      <div className="deals-container">
+	      <div className="baskets-container">
 	        <div className="top-logo" style={{zIndex:999}} >
 	        	<button className="btn-primary" type="button" onClick={this.toggleShow} onBlur={this.hide}>
 	        	<img src={logo} alt="logo" style={{zIndex:999}} />
@@ -135,7 +135,7 @@ export default class History extends Component {
 	        	
 	        {
 	          history &&
-	          <ul className="deals-list">
+	          <ul className="baskets-list">
 	            {this.getHistoryItems()}
 	          </ul>
 	        }

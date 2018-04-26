@@ -67,9 +67,6 @@ export default class ViewDeals extends Component {
           style={{ backgroundImage: `url(${thumbnail})` }}
         >
           <div className="deal-item-container">
-            <div className="deal-distributor-avatar">
-              <img src={`//logo.clearbit.com/${distributor}.com`} alt="distributor" />
-            </div>
             <div className="deal-description">
               <div className="distance">
                 <LocationIcon color="#cecece" />
