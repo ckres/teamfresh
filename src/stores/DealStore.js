@@ -11,6 +11,7 @@ const mockedData = {
       distance: 1.9,
       delivery_date: '3/20/2018',
       total_cost: 14.57,
+      location: 'cary',
       amount_purchased: 12,
       distributor: 'wholefoodsmarket'
     },
@@ -23,6 +24,7 @@ const mockedData = {
       distance: 2.4,
       delivery_date: '3/20/2018',
       total_cost: 24.57,
+      location: 'cary',
       amount_purchased: 5,
       distributor: 'mytraderjoeslist'
     },
@@ -35,6 +37,7 @@ const mockedData = {
       distance: 5.4,
       delivery_date: '3/20/2018',
       total_cost: 8.57,
+      location: 'raleigh',
       amount_purchased: 10,
       distributor: 'wholefoodsmarket'
     },
@@ -47,6 +50,7 @@ const mockedData = {
       distance: 0.8,
       delivery_date: '3/20/2018',
       total_cost: 9.68,
+      location: 'cary',
       amount_purchased: 10,
       distributor: 'foodlion'
     }

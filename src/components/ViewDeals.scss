@@ -5,6 +5,20 @@
     display: flex;
     align-items: center;
 
+    .query-type-select {
+      font-family: inherit;
+      font-size: 1rem;
+      border: 1px solid #b7b7b7;
+      color: #a09f9f;
+      outline: none;
+      max-width: 100px;
+      margin-right: 10px;
+      padding: 9px;
+      text-align: center;
+      display: inline-block;
+      -webkit-appearance: none;
+    }
+
     input {
       padding: 0 0.8rem;
       margin-right: 0.5rem;
@@ -24,6 +38,7 @@
     justify-content: center;
     .deal-item {
       margin-bottom: 1rem;
+      background-size: cover;
       &:nth-child(odd) {
         margin-right: 1rem;
       }
