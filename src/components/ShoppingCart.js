@@ -1,52 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment} from 'react'
 import { observer, inject } from 'mobx-react'
-import { SearchIcon, LocationIcon } from './Icons'
+import { LocationIcon } from './Icons'
 
 import './ShoppingCart.css'
-import logo from '../assets/logo.png'
-
+import Menu from './Menu';
 
 @inject('dealStore')
 @observer
-export default class ShoppingCArt extends Component {
+export default class ShoppingCart extends Component {
   state = {
     isLoadingDeals: true,
     deals: null
   }
 
-  constructor(props){
-	    super(props);
-
-	    this.state = {
-	      show: false
-	    }
-	    this.doSomething = this.doSomething.bind(this);
-	    this.toggleShow = this.toggleShow.bind(this);
-	    this.hide = this.hide.bind(this);
-	  }
-
-	  doSomething(e){
-	    e.preventDefault();
-	    console.log(e.target.innerHTML);
-	  }
-
-	  toggleShow(){
-	    this.setState({show: !this.state.show});
-	  }
-
-	  hide(e){
-	    if(e && e.relatedTarget){
-	      e.relatedTarget.click();
-	    }
-	    this.setState({show: false});
-	  }
-	  
   componentDidMount() {
 	  const { dealStore } = this.props
-
-	    dealStore.getDeals().then((deals) => {
-	      this.setState({ deals })
-	    })
+		dealStore.getDeals().then((deals) => {
+			this.setState({ deals })
+		})
   }
   
   getDealItems() {
@@ -96,50 +67,28 @@ export default class ShoppingCArt extends Component {
   render() {
     const { deals } = this.state
     return (
-      <div className="baskets-container">
-        <div className="top-logo" style={{zIndex:999}} >
-        	<button className="btn-primary" type="button" onClick={this.toggleShow} onBlur={this.hide}>
-        	<img src={logo} alt="logo" style={{zIndex:999}} />
-        		<span className="caret"></span>
-        	</button>       	
-        <div className="dropdown-menu" >
-        {
-        	this.state.show &&
-      (
-        <ul className="dropdown-menu" style={{display: 'block'}}>
-        <li><div className="btn-submit" style={{zIndex:200}}>
-        	<input type="button" value="Profile"/>
-        </div></li>
-        <li><div className="btn-submit" style={{zIndex:200}}>
-    		<input type="button" value="View Deals"/>
-    	</div></li>
-        <li><div className="btn-submit" style={{zIndex:200}}>
-    		<input type="button" value="Shopping Cart"/>
-    	</div></li>
-    	<li><div className="btn-submit" style={{zIndex:200}}>
-    		<input type="button" value="Log Out"/>
-    	</div></li>
-    	<div className="background-circle" style={{zIndex:10}} ></div>
-        </ul>
-      )
-      }
-        </div>
-        </div>
-        <br />
-        <div className="basket-header">
-    	  <label>Grocery Basket</label>
-	    </div>
-        {
-          deals &&
-          <ul className="baskets-list">
-            {this.getDealItems()}
-          </ul>
-        }
-        <div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
-        <div className="btn-submit">
-	      <input type="button" value="Purchase"/>
-        </div>
-      </div>
+
+			<Fragment>
+				<Menu />
+				<div className="baskets-container">
+          <div className="basket-header">
+    	      <label>Grocery Basket</label>
+	        </div>
+					{
+						deals &&
+						<Fragment>
+							<ul className="deals-list">
+								{this.getDealItems()}
+							</ul>
+              <div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
+							<div className="btn-submit">
+								<input type="button" value="Purchase"/>
+							</div>
+						</Fragment>
+					}
+				</div>
+			</Fragment>
+
     )
   }
 }

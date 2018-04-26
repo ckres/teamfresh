@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { SearchIcon, LocationIcon } from './Icons'
+import Menu from './Menu'
 
 import './ViewDeals.css'
-import logo from '../assets/logo.png'
 
 @inject('dealStore')
 @observer
@@ -87,9 +87,7 @@ export default class ViewDeals extends Component {
     const { deals } = this.state
     return (
       <div className="deals-container">
-        <div className="top-logo">
-          <img src={logo} alt="logo"/>
-        </div>
+        <Menu />
         <div className="deals-search">
           <input
             type="text"

@@ -5,12 +5,10 @@ import {
   Redirect,
   Route
 } from 'react-router-dom'
-import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute } from './components/routes'
-import PrivateRoute from './components/PrivateRoute'
 
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute } from './components/routes'
 
 import './App.css'
-import UserStore from './stores/UserStore';
 
 @inject('userStore')
 @observer
