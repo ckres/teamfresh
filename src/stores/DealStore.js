@@ -1,3 +1,5 @@
+import { action, observable } from 'mobx'
+
 const mockedData = {
   deals: [
     {
@@ -7,6 +9,10 @@ const mockedData = {
       price_before: 5.98,
       unit: 'bag',
       distance: 1.9,
+      delivery_date: '3/20/2018',
+      delivery_time: '4:00pm',
+      total_cost: 14.57,
+      amount_purchased: 12,
       distributor: 'wholefoodsmarket'
     },
     {
@@ -16,15 +22,23 @@ const mockedData = {
       price_before: 8.90,
       unit: 'bag',
       distance: 2.4,
+      delivery_date: '3/20/2018',
+      delivery_time: '4:30pm',
+      total_cost: 24.57,
+      amount_purchased: 5,
       distributor: 'mytraderjoeslist'
     },
     {
-      name: 'Brocoli',
+      name: 'Broccoli',
       thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyVMxizq9vS4Zj5zOcUZ4ROcTrd84boGBDggq3pD64IbLkj8hI',
       price: 3.20,
       price_before: 4.90,
       unit: 'bag',
       distance: 5.4,
+      delivery_date: '3/20/2018',
+      delivery_time: '3:45pm',
+      total_cost: 8.57,
+      amount_purchased: 10,
       distributor: 'wholefoodsmarket'
     },
     {
@@ -34,17 +48,28 @@ const mockedData = {
       price_before: 2.99,
       unit: 'bag',
       distance: 0.8,
+      delivery_date: '3/20/2018',
+      delivery_time: '4:00pm',
+      total_cost: 9.68,
+      amount_purchased: 10,
       distributor: 'foodlion'
     }
   ]
 }
 
-export default class DealStore {
-  static getDeals() {
-    return new Promise((resolve, reject) => {
+class DealStore {
+  @observable
+  deals = null
+
+  @action
+  getDeals() {
+    return this.deals ? Promise.resolve(this.deals) : new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(mockedData.deals)
+        this.deals = mockedData.deals
       }, 1000)
     })
   }
 }
+
+export default new DealStore()

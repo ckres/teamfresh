@@ -1,15 +1,19 @@
 .login-container {
   font-family: 'MuseoSans300', 'sans-serif';
   background-image: url('../assets/Cover.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
   margin: -15px;
   position: fixed;
   display:table-cell;
   object-fit: contain;
-  padding-bottom: 400px;
+  padding-bottom: auto;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-size:cover;
+  
   .login-credentials {
     display: flex;
     justify-content: center;
@@ -22,13 +26,25 @@
       position: relative;
       top: -3em;
       color: #808080;
+      width: 100%;
     }
     label {
-      width: 6em;
-      margin-right: 6.5em;
+      margin-left: 5%;
+      margin-right: 5%;
       padding-top: 1.5em;
-      color: #3DD28F;
+      color: #808080;;
     }
+  }
+  
+  .login-wrapper {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 25px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 93%;
   }
 
   .btn-submit {
@@ -55,12 +71,9 @@
   
   .img-format {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    margin: 3rem auto;
-    margin-top:auto;
-    margin-bottom:auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
   }
   
   .example-appear {
@@ -69,6 +82,6 @@
 	
   .example-appear.example-appear-active {
     opacity: 1;
-    transition: opacity 3s ease-in;
+    transition: opacity 1s ease-in;
   }
 }
