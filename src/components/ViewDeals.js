@@ -52,7 +52,7 @@ export default class ViewDeals extends Component {
                     <div className="header"> Deal Info </div>
                     <div className="content">
                       {" "}
-                      <img class="popup-image" src={thumbnail}/>
+                      <img class="popup-image" src={thumbnail} alt="Product"/>
                       <div><strong>Product Name/Type: </strong>{name}</div>
                       <br />
                       <div>
@@ -63,28 +63,57 @@ export default class ViewDeals extends Component {
                         <strong>Price per unit:</strong> ${price}
                       </div>
                       <br/>
+                      
                       <div>
-                        <strong>Quantity Available:</strong> 236 lbs
+                        <strong>Quantity Required (in lbs):</strong>
+                        <select id="quantity">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="65">65</option>
+                        <option value="75">75</option>
+                        </select>
+                        
                       </div>
                       <br/>
                       <div>
-                        <strong>Best Before:</strong> 05/15/2018
+                        <strong> Amount: </strong> ${price * 10}
+                      </div>
+                      <br/>
+                      <div>
+                        <strong>Deliver by:</strong><input type="date" name="deliverby"/>
+                        <select id="time">
+                        <option value="9">9 AM</option>
+                        <option value="10">10 AM</option>
+                        <option value="11">11 AM</option>
+                        <option value="12">12 PM</option>
+                        <option value="1">1 PM</option>
+                        </select>
                       </div>
                       </div>
+                    
                     <div className="btn-submit">
-                      <input type="button" value="Add to Cart"/>
+                      <input type="button" value="Add to Cart" onClick={this.checkout}/>
                     </div>
                   </div>
+                  
               )}
             </Popup>
               </div>
             </div>
           </div>
         </li>
+        
       )
     })
-  }
+   }
+  
+   checkout = () => {
+    //route to shopping cart
+}
 
+              
+                    
   render() {
     const { deals } = this.state
     return (
