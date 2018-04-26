@@ -12,6 +12,7 @@ const mockedData = {
       delivery_date: '3/20/2018',
       delivery_time: '4:00pm',
       total_cost: 14.57,
+      location: 'cary',
       amount_purchased: 12,
       distributor: 'wholefoodsmarket'
     },
@@ -25,6 +26,7 @@ const mockedData = {
       delivery_date: '3/20/2018',
       delivery_time: '4:30pm',
       total_cost: 24.57,
+      location: 'cary',
       amount_purchased: 5,
       distributor: 'mytraderjoeslist'
     },
@@ -38,6 +40,7 @@ const mockedData = {
       delivery_date: '3/20/2018',
       delivery_time: '3:45pm',
       total_cost: 8.57,
+      location: 'raleigh',
       amount_purchased: 10,
       distributor: 'wholefoodsmarket'
     },
@@ -51,6 +54,7 @@ const mockedData = {
       delivery_date: '3/20/2018',
       delivery_time: '4:00pm',
       total_cost: 9.68,
+      location: 'cary',
       amount_purchased: 10,
       distributor: 'foodlion'
     }
