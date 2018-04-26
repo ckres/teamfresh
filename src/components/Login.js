@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
+import { observer, inject } from 'mobx-react'
 
 import './Login.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
 
+@inject('userStore')
+@observer
 class Login extends Component {
   state = {
     username: null,

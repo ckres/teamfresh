@@ -1,4 +1,4 @@
-.deals-container {
+.shopping-cart-container {
   font-family: 'MuseoSans300', 'sans-serif';
   background-size: auto;
   .btn-primary {
@@ -6,8 +6,8 @@
      background: none;
   }
   .background-circle {
- 	background: #FFFFFF;
- 	position: fixed;
+    background: #FFFFFF;
+    position: fixed;
   	margin: 0 1em 1em 0;
   	height: 56%;
   	width: 100%;
@@ -26,13 +26,6 @@
       background-color: #fff;
       border-radius: 100%;
       box-shadow: 0 0.3rem 1rem #cacaca;
-   }
-   .dropdown-menu {
-     position: fixed;
-     top: 13%;
-     display: flex;
-     margin-left: 24.2%;
-     justify-content: center;
    }
   }
   .deals-search {
@@ -79,19 +72,16 @@
   
   .btn-basic {
     position: absolute;
-    margin: 7.7rem 0 0rem 0;
-    margin-left: 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 400;
+    transform: translate(-50%, -130%);
+    top: 100%;
+    left: 3.5rem;
 
     input {
       padding: 0 0.8rem;
       margin-right: 0.5rem;
       border-radius: 0.5rem;
       height: 1.5rem;
-      background-color: red;
+      background-color: #e88e8e;
       width: 5rem;
       color: white;
       border: none;
