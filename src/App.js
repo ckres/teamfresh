@@ -5,7 +5,8 @@ import {
   Redirect,
   Route
 } from 'react-router-dom'
-import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute } from './components/routes'
+
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute } from './components/routes'
 
 import './App.css'
 
@@ -39,6 +40,13 @@ class App extends Component {
             exact
             path={'/deals'}
             component={ViewDealsRoute}
+          />
+          <Route
+          	exact
+          	path={'/history'}
+          	render={() => {
+          		return <HistoryRoute />
+          	}}
           />
           <Route
             exact

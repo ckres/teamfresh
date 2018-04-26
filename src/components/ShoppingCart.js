@@ -23,39 +23,35 @@ export default class ShoppingCart extends Component {
   getDealItems() {
     const { deals } = this.state
     return deals.map((deal, i) => {
-      const { name, price, price_before, unit, distance, delivery_date, total_cost, amount_purchased, thumbnail } = deal
+      const { name, price, price_before, unit, distance, delivery_date, delivery_time, total_cost, amount_purchased, distributor, thumbnail } = deal
       return (
         <li
           key={i}
-          className="deal-item"
+          className="basket-item"
           style={{ backgroundImage: `url(${thumbnail})` }}
         >
-          <div className="deal-item-container">
-            <div className="deal-description">
+          <div className="basket-item-container">
+            <div className="basket-description">
             
             	<div className="information">
-            	<table className="table">
-								<tbody>
-									<tr>
-										<td>
-											<div className="distance">
-													<LocationIcon color="#cecece" />
-														{distance} m
-												</div>
-													<div className="deal-name">{name}</div>
-													<div className="deal-price">
-														{`$${price}/${unit}`}&nbsp;<span className="deal-price_before"><br />(was ${price_before})</span>
-													</div>
-											</td>
-										<td>	      
-											<div className="purchased"># Purchased: {amount_purchased}</div>
-												<div className="deal-cost">
-													Total: ${total_cost}
-												</div>
-												<div className="deal-delivery">Delivery Date: {delivery_date}</div>
-										</td>
-									</tr>
-								</tbody>
+            	<table>
+            		<tr>
+            			<td>
+	            			<div className="distance">
+		                		<LocationIcon color="#cecece" />
+		                			{distance} m
+		                	</div>
+		                    <div className="basket-name">{name}</div>
+		                    <div className="basket-price">
+		                    	{`$${price}/${unit}`}&nbsp;<span className="deal-price_before"><br />(was ${price_before})</span>
+		                    </div>
+		                </td>
+            			<td>	      
+	            			<div className="purchased"># Purchased: {amount_purchased}</div>
+			                <div className="basket-cost">Total: ${total_cost}</div>
+			                <div className="basket-delivery">Arrival: {delivery_date} {delivery_time}</div>
+            			</td>
+            		</tr>
             	</table>
                 </div>
             </div>
@@ -71,15 +67,20 @@ export default class ShoppingCart extends Component {
   render() {
     const { deals } = this.state
     return (
+
 			<Fragment>
 				<Menu />
-				<div className="shopping-cart-container">
+				<div className="baskets-container">
+          <div className="basket-header">
+    	      <label>Grocery Basket</label>
+	        </div>
 					{
 						deals &&
 						<Fragment>
 							<ul className="deals-list">
 								{this.getDealItems()}
 							</ul>
+              <div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
 							<div className="btn-submit">
 								<input type="button" value="Purchase"/>
 							</div>
@@ -87,6 +88,7 @@ export default class ShoppingCart extends Component {
 					}
 				</div>
 			</Fragment>
+
     )
   }
 }
