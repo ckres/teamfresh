@@ -6,11 +6,8 @@ import {
   Route
 } from 'react-router-dom'
 import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute } from './components/routes'
-import PrivateRoute from './components/PrivateRoute'
-
 
 import './App.css'
-import UserStore from './stores/UserStore';
 
 @inject('userStore')
 @observer
