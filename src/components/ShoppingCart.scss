@@ -1,10 +1,29 @@
-
 .basket-header {
   font-family: 'MuseoSans300', 'sans-serif';
   font-size: 2rem;
   color: #4c4c4c;
-  
 }
+
+.btn-basic {
+  position: absolute;
+  transform: translate(-50%, -130%);
+  top: 100%;
+  left: 3.5rem;
+
+  input {
+    padding: 0 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    background-color: #ef594f;
+    width: 5rem;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+} 
 
 .basket-total-purchase {
   font-family: 'MuseoSans300', 'sans-serif';
@@ -48,31 +67,12 @@
     font-size: 1rem;
     cursor: pointer;
   }
-  .btn-basic {
-    position: absolute;
-    transform: translate(-50%, -130%);
-    top: 100%;
-    left: 3.5rem;
-
-    input {
-      padding: 0 0.8rem;
-      margin-right: 0.5rem;
-      border-radius: 0.5rem;
-      height: 1.5rem;
-      background-color: #e88e8e;
-      width: 5rem;
-      color: white;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-  }
+ 
 }
   
 .baskets-list {
   display: flex;
-  margin-top: 3%;
+  margin-top: 2%;
   flex-wrap: wrap;
   justify-content: center;
   

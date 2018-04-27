@@ -38,7 +38,12 @@ export default class Menu extends Component {
           </li>
           <li className="menu-item">
             <Link to="/shoppingcart">
-              Shopping Cart
+              Grocery Basket
+            </Link>
+          </li>
+          <li className="menu-item">
+            <Link to="/history">
+              Order History
             </Link>
           </li>
           <li className="menu-item">
