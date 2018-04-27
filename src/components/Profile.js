@@ -81,7 +81,7 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon size={16} icon={pencil}/></div>
+				<div><Icon icon={pencil}/></div>
 			</div>
 	    	<div className="Profile-context">
 				<div className="btn-submit" >
