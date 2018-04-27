@@ -71,13 +71,14 @@ export default class ShoppingCart extends Component {
 			<Fragment>
 				<Menu />
 				<div className="baskets-container">
+				<br />
           <div className="basket-header">
     	      <label>Grocery Basket</label>
 	        </div>
 					{
 						deals &&
 						<Fragment>
-							<ul className="deals-list">
+							<ul className="baskets-list">
 								{this.getDealItems()}
 							</ul>
               <div className="basket-total-purchase">Total Purchase Cost: $57.39</div>

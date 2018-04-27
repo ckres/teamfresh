@@ -68,7 +68,7 @@ export default class History extends Component {
 	    
 	      <div className="baskets-container">
 	        <Menu />
-	        <br/><br/>
+	        <br/>
 	        <div className="header">
 	        	<label>Order History</label>
         	</div>

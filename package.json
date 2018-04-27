@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "http://ckres.github.io/teamfresh",
   "scripts": {
-    "start": "PORT=3007 npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "start-js": "react-app-rewired start",
     "build": "npm-run-all build-css build-js",
     "build-js": "react-app-rewired build",
@@ -26,7 +26,8 @@
     "react-scripts": "1.1.1",
     "reactjs-popup": "1.1.0",
     "react-inline-editing": "1.0.10",
-    "store": "^2.0.12"
+    "store": "^2.0.12",
+    "react-icons-kit": "1.0.7"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.7",
