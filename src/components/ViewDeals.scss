@@ -38,6 +38,7 @@
     justify-content: center;
     .deal-item {
       margin-bottom: 1rem;
+      background-size: cover;
       &:nth-child(odd) {
         margin-right: 1rem;
       }
