@@ -47,19 +47,24 @@
     text-align: center;
   }
   .edit-context {
-    strong {
-      color: #4c4c4c;
-    }
-    .myLabelClass{
-    }
-    .myInputClass{
-      font-size: 20px;
-      color: rgb(120, 120, 120);
-    }
     display: flex;
     color: rgb(120, 120, 120);
     margin-left: 10%;
     padding-top: 2em;
+    strong {
+      color: #4c4c4c;
+    }
+    .myLabelClass{
+      cursor: pointer;
+    }
+    .myInputClass{
+      outline-color: grey;
+      font-size: 20px;
+      color: rgb(120, 120, 120);
+    }
+    .myLabelClass:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
   }
 
   .profile-wrapper {

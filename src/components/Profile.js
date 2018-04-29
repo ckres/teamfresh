@@ -37,7 +37,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon icon={pencil}/></div>
 			</div>
 			<div className="edit-context">
 				<strong>Email: </strong>
@@ -48,7 +47,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon icon={pencil}/></div>
 			</div>
 			<div className="edit-context">
 				<strong>Phone: </strong>
@@ -59,7 +57,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon icon={pencil}/></div>
 			</div>
 			<div className="edit-context">
 				<strong>Address: </strong>
@@ -70,7 +67,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon icon={pencil}/></div>
 			</div>
 			<div className="edit-context">
 				<strong>City/State/ZIP: </strong>
@@ -81,12 +77,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<div><Icon icon={pencil}/></div>
-			</div>
-	    	<div className="Profile-context">
-				<div className="btn-submit" >
-				<input type="button" value="Order History"/>
-				</div>
 			</div>
 	  </div>
 		)
