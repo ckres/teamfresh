@@ -61,3 +61,4 @@ $charcoal-light: #404041;
 ### Routes
 
 We use `react-router` to handle route. As you can see, this project is essentially a Single Page Application, in which we only have one `html` file and a single entry `App.js`.
+
