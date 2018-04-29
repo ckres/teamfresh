@@ -1,10 +1,9 @@
 
 import React, { Component } from 'react'
 import EditableLabel from 'react-inline-editing'
-import Icon from 'react-icons-kit'
-import { pencil } from 'react-icons-kit/icomoon/pencil'; 
 import Menu from './Menu'
 import './Profile.css'
+import logo from '../assets/logo.png'
 
 export default class Profile extends Component {
 state = {
@@ -12,11 +11,9 @@ state = {
 }
 
 _handleFocus = (text) => {
-    console.log('Focused with text: ' + text);
 }
  
 _handleFocusOut = (text) => {
-    console.log('Left editor with text: ' + text);
 }
 
 render() {
@@ -25,7 +22,11 @@ render() {
 				<Menu />
 		    <div className="profile-wrapper">
 					<div className="avatar">
-						<img src='https://seeklogo.com/images/O/organic-restaurant-logo-D34AC3E788-seeklogo.com.png' alt="profilePhoto" /> 
+						<img 
+							src={logo}
+							alt="profilePhoto"
+							style={{ backgroundColor: '#fff' }}
+						/> 
 					</div>
 		    </div>
 			<div className="edit-context">

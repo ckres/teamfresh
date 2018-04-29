@@ -1,8 +1,9 @@
-
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
-import './History.css'
 import Menu from './Menu'
+import LoadingSpinner from './LoadingSpinner'
+
+import './History.css'
 
 @inject('historyStore')
 @observer
@@ -16,7 +17,10 @@ export default class History extends Component {
 		  const { historyStore } = this.props
 
 			historyStore.getHistory().then((history) => {
-				this.setState({ history })
+				this.setState({ 
+					isLoadingHistory: false,
+					history,
+				})
 			})
 	  }
 	  
@@ -63,21 +67,21 @@ export default class History extends Component {
 	  }
 
   render() {
-	  const { history } = this.state
+	  const { isLoadingHistory } = this.state
 	    return (
-	    
 	      <div className="baskets-container">
 	        <Menu />
 	        <br/>
 	        <div className="header">
 	        	<label>Order History</label>
         	</div>
-	        	
 	        {
-	          history &&
-	          <ul className="baskets-list">
-	            {this.getHistoryItems()}
-	          </ul>
+						isLoadingHistory ?
+							<LoadingSpinner />
+							:
+							<ul className="baskets-list">
+								{this.getHistoryItems()}
+							</ul>
 	        }
 	      </div>
 	    )

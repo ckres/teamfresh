@@ -1,6 +1,7 @@
 import React, { Component, Fragment} from 'react'
 import { observer, inject } from 'mobx-react'
 import { LocationIcon } from './Icons'
+import LoadingSpinner from './LoadingSpinner'
 
 import './ShoppingCart.css'
 import Menu from './Menu';
@@ -16,7 +17,10 @@ export default class ShoppingCart extends Component {
   componentDidMount() {
 	  const { dealStore } = this.props
 		dealStore.getDeals().then((deals) => {
-			this.setState({ deals })
+			this.setState({
+				isLoadingDeals: false,
+				deals,
+			})
 		})
   }
   
@@ -32,32 +36,33 @@ export default class ShoppingCart extends Component {
         >
           <div className="basket-item-container">
             <div className="basket-description">
-            
             	<div className="information">
-            	<table>
-            		<tr>
-            			<td>
-	            			<div className="distance">
-		                		<LocationIcon color="#cecece" />
-		                			{distance} m
-		                	</div>
-		                    <div className="basket-name">{name}</div>
-		                    <div className="basket-price">
-		                    	{`$${price}/${unit}`}&nbsp;<span className="deal-price_before"><br />(was ${price_before})</span>
-		                    </div>
-		                </td>
-            			<td>	      
-	            			<div className="purchased"># Purchased: {amount_purchased}</div>
-			                <div className="basket-cost">Total: ${total_cost}</div>
-			                <div className="basket-delivery">Arrival: {delivery_date} {delivery_time}</div>
-            			</td>
-            		</tr>
-            	</table>
-                </div>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<div className="distance">
+													<LocationIcon color="#cecece" />
+														{distance} m
+													</div>
+													<div className="basket-name">{name}</div>
+													<div className="basket-price">
+														{`$${price}/${unit}`}&nbsp;<span className="deal-price_before"><br />(was ${price_before})</span>
+													</div>
+												</td>
+											<td>	      
+												<div className="purchased"># Purchased: {amount_purchased}</div>
+												<div className="basket-cost">Total: ${total_cost}</div>
+												<div className="basket-delivery">Arrival: {delivery_date} {delivery_time}</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
             </div>
             <div className="btn-basic">
-		      <input type="button" value="Delete"/>
-	        </div>
+							<input type="button" value="Delete"/>
+						</div>
           </div>
         </li>
       )
@@ -65,7 +70,7 @@ export default class ShoppingCart extends Component {
   }
 
   render() {
-    const { deals } = this.state
+    const { isLoadingDeals } = this.state
     return (
 
 			<Fragment>
@@ -76,16 +81,18 @@ export default class ShoppingCart extends Component {
     	      <label>Grocery Basket</label>
 	        </div>
 					{
-						deals &&
-						<Fragment>
-							<ul className="baskets-list">
-								{this.getDealItems()}
-							</ul>
-              <div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
-							<div className="btn-submit">
-								<input type="button" value="Purchase"/>
-							</div>
-						</Fragment>
+						isLoadingDeals ?
+							<LoadingSpinner />
+							:
+							<Fragment>
+								<ul className="baskets-list">
+									{this.getDealItems()}
+								</ul>
+								<div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
+								<div className="btn-submit">
+									<input type="button" value="Purchase"/>
+								</div>
+							</Fragment>
 					}
 				</div>
 			</Fragment>
