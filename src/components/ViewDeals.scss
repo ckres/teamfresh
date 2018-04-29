@@ -89,6 +89,11 @@
             color: #4c4c4c;
             font-family: 'MuseoSans500';
             font-size: 0.8rem;
+            padding: 5px;
+            .popup {
+              border-radius: 15px solid #cfcece;
+              padding: 10px;
+              
             .close {
               cursor: pointer;
               position: absolute;
@@ -114,7 +119,7 @@
               width: 100%;
               padding: 10px 5px;
               margin-bottom: 0.2rem;
-              font-size: 16px;
+              font-size: 14px;
               font-family: 'MuseoSans500';
               color: #4c4c4c;
               align-items: center;
@@ -164,6 +169,7 @@
                 font-size: 0.8rem;
                 cursor: pointer;
             }
+          }
           }
         }
       }

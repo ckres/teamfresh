@@ -93,9 +93,9 @@ export default class ViewDeals extends Component {
                 {`$${price}/${unit}`}&nbsp;<span className="deal-price_before">(was ${price_before})</span>
               </div>
               <div className="deal-more-details">
-              <Popup trigger={<button className="button"> More Details </button>} modal>
+              <Popup trigger={<button class="button"> More details </button>} modal>
                 {close => (
-                  <div>
+                  <div class="popup">
                     <a className="close" onClick={close}>
                       &times;
                     </a>
