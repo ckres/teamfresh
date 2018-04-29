@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { SearchIcon, LocationIcon } from './Icons'
 import Menu from './Menu'
+import LoadingSpinner from './LoadingSpinner'
 
 import './ViewDeals.css'
 
@@ -19,7 +20,10 @@ export default class ViewDeals extends Component {
     const { dealStore } = this.props
 
     dealStore.getDeals().then((deals) => {
-      this.setState({ deals })
+      this.setState({
+        isLoadingDeals: false,
+        deals,
+      })
     })
   }
 
@@ -98,7 +102,8 @@ export default class ViewDeals extends Component {
   }
 
   render() {
-    const { deals } = this.state
+    const { isLoadingDeals } = this.state
+
     return (
       <div className="deals-container">
         <Menu />
@@ -122,10 +127,12 @@ export default class ViewDeals extends Component {
           </span>
         </div>
         {
-          deals &&
-          <ul className="deals-list">
-            {this.getDealItems()}
-          </ul>
+          isLoadingDeals ?
+            <LoadingSpinner />
+            :
+            <ul className="deals-list">
+              {this.getDealItems()}
+            </ul>
         }
       </div>
     )
