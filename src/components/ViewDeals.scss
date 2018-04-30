@@ -64,7 +64,8 @@
         .deal-description {
           align-self: flex-end;
           padding: 0.5rem;
-          height: 6rem;
+          position: relative;
+          height: 5.5rem;
           width: 100%;
           background-color: rgba(255, 255, 255, 0.9);
 
@@ -86,90 +87,96 @@
             font-size: 0.8rem;
           }
           .deal-more-details {
+            position: absolute;
+            bottom: 10px;
+            left: 3px;
             color: #4c4c4c;
             font-family: 'MuseoSans500';
             font-size: 0.8rem;
             padding: 5px;
-            .popup {
-              border-radius: 15px solid #cfcece;
-              padding: 10px;
+            .popup-content {
+              width: 75% !important;
+              border-radius: 5px;
+              .popup {
+                padding: 10px;
+                .close {
+                  cursor: pointer;
+                  position: absolute;
+                  display: block;
+                  padding: 2px 5px;
+                  line-height: 20px;
+                  right: -10px;
+                  top: -10px;
+                  font-size: 24px;
+                  background: #ffffff;
+                  border-radius: 18px;
+                  border: 1px solid #cfcece;
+                }
+                .header {
+                  width: 100%;
+                  font-family: 'MuseoSans500';
+                  font-size: 28px;
+                  color: #3DD28F;
+                  text-align: center;
+                  padding: 5px;
+                }
+                .content {
+                  width: 100%;
+                  padding: 10px 5px;
+                  margin-bottom: 0.2rem;
+                  font-size: 14px;
+                  font-family: 'MuseoSans500';
+                  color: #4c4c4c;
+                  align-items: center;
+                  justify-content: center;
+                  .popup-image {
+                    padding: 0;
+                    display: block;
+                    margin: 0 auto;
+                    margin-left: -0.3rem;
+                    margin-bottom: 1rem;
+                    max-height: 100%;
+                    max-width: 100%;
+                  }
+                }
+                .btn-submit {
+                  margin: 1rem 0 0rem 0;
+                  display: flex;
+                  align-items: center;
+                justify-content: center;
+                padding-bottom: 2em;
               
-            .close {
-              cursor: pointer;
-              position: absolute;
-              display: block;
-              padding: 2px 5px;
-              line-height: 20px;
-              right: -10px;
-              top: -10px;
-              font-size: 24px;
-              background: #ffffff;
-              border-radius: 18px;
-              border: 1px solid #cfcece;
-            }
-            .header {
-              width: 100%;
-              font-family: 'MuseoSans500';
-              font-size: 28px;
-              color: #3DD28F;
-              text-align: center;
-              padding: 5px;
-            }
-            .content {
-              width: 100%;
-              padding: 10px 5px;
-              margin-bottom: 0.2rem;
-              font-size: 14px;
-              font-family: 'MuseoSans500';
-              color: #4c4c4c;
-              align-items: center;
-              justify-content: center;
-              .popup-image {
-                padding: 0;
-                display: block;
-                margin: 0 auto;
-                margin-left: -0.3rem;
-                max-height: 100%;
-                max-width: 100%;
+                  input {
+                    padding: 0 0.8rem;
+                    margin-right: 0.5rem;
+                    border-radius: 0.5rem;
+                    height: 2.5rem;
+                    box-shadow: 0 0.3rem 1rem #e8e8e8;
+                    background-color: #3DD28F;
+                    width: 90px;
+                    color: white;
+                    border: none;
+                    outline: none;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                  }
+                }
+                .button {
+                  padding: 0 0.8rem;
+                    margin-right: 0.5rem;
+                    border-radius: 0.5rem;
+                    height: 1.8rem;
+                    box-shadow: 0 0.3rem 1rem #e8e8e8;
+                    background-color: #3DD28F;
+                    width: 90px;
+                    color: white;
+                    border: none;
+                    outline: none;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                }
               }
             }
-            .btn-submit {
-              margin: 1rem 0 0rem 0;
-              display: flex;
-              align-items: center;
-            justify-content: center;
-            padding-bottom: 2em;
-          
-              input {
-                padding: 0 0.8rem;
-                margin-right: 0.5rem;
-                border-radius: 0.5rem;
-                height: 2.5rem;
-                box-shadow: 0 0.3rem 1rem #e8e8e8;
-                background-color: #3DD28F;
-                width: 90px;
-                color: white;
-                border: none;
-                outline: none;
-                font-size: 0.8rem;
-                cursor: pointer;
-              }
-            }
-            .button {
-              padding: 0 0.8rem;
-                margin-right: 0.5rem;
-                border-radius: 0.5rem;
-                height: 1.8rem;
-                box-shadow: 0 0.3rem 1rem #e8e8e8;
-                background-color: #3DD28F;
-                width: 90px;
-                color: white;
-                border: none;
-                outline: none;
-                font-size: 0.8rem;
-                cursor: pointer;
-            }
-          }
           }
         }
       }
