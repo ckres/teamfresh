@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
+import Popup from 'reactjs-popup'
 import { SearchIcon, LocationIcon } from './Icons'
 import Menu from './Menu'
 import LoadingSpinner from './LoadingSpinner'
 
 import './ViewDeals.css'
 
-import Popup from 'reactjs-popup'
 
 @inject('dealStore')
 @observer
-export default class ViewDeals extends Component {
+class ViewDeals extends Component {
   state = {
     isLoadingDeals: true,
     deals: null,
@@ -97,16 +98,23 @@ export default class ViewDeals extends Component {
                 {`$${price}/${unit}`}&nbsp;<span className="deal-price_before">(was ${price_before})</span>
               </div>
               <div className="deal-more-details">
-              <Popup trigger={<button class="button"> More details </button>} modal>
+              <Popup 
+                trigger={<button className="more-details-btn"> More details </button>}
+                style={{
+                  width: '75%',
+                  borderRadius: '5px',
+                }}
+                modal
+              >
                 {close => (
-                  <div class="popup">
+                  <div className="popup">
                     <a className="close" onClick={close}>
                       &times;
                     </a>
                     <div className="header"> Deal Info </div>
                     <div className="content">
                       {" "}
-                      <img class="popup-image" src={thumbnail} alt="Product"/>
+                      <img className="popup-image" src={thumbnail} alt="Product"/>
                       <div><strong>Product Name/Type: </strong>{name}</div>
                       <br />
                       <div>
@@ -127,7 +135,6 @@ export default class ViewDeals extends Component {
                         <option value="65">65</option>
                         <option value="75">75</option>
                         </select>
-                        
                       </div>
                       <br/>
                       <div>
@@ -144,13 +151,15 @@ export default class ViewDeals extends Component {
                         <option value="1">1 PM</option>
                         </select>
                       </div>
-                      </div>
-                    
+                    </div>
                     <div className="btn-submit">
-                      <input type="button" value="Add to Cart" onClick={this.checkout}/>
+                      <input 
+                        type="button"
+                        value="Add to Cart"
+                        onClick={this.checkout}
+                      />
                     </div>
                   </div>
-                  
               )}
             </Popup>
               </div>
@@ -162,9 +171,11 @@ export default class ViewDeals extends Component {
     })
    }
   
-   checkout = () => {
+  checkout = () => {
     //route to shopping cart
-}
+    const { history } = this.props
+    history.push('/shoppingcart')
+  }
 
               
                     
@@ -205,3 +216,5 @@ export default class ViewDeals extends Component {
     )
   }
 }
+
+export default withRouter(ViewDeals)
