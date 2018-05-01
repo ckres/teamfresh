@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 
 import './SignUp.css'
 import logoTitle from '../assets/FreshSpire-Brandmark_Combination-Green.png';
@@ -14,7 +14,7 @@ export default class SignUp extends Component {
     return (
       <div className="SignUp-container">
           <div className="sign-up-wrapper">
-				<img src={logoTitle} alt="FreshSpire" className="img-format"/>
+				<img src={logoTitle} alt="FreshSpire" className="img-format-sign"/>
 	            <div className="SignUp-context">
 	      	        <label>Username <input type="text"/></label>
 	            </div>
@@ -42,9 +42,12 @@ export default class SignUp extends Component {
 		        <div className="SignUp-context">
 			        <label>ZIP <input type="text"/></label>
 		        </div>	
-				<div className="btn-submit">
+				<div className="btn-submit-sign">
 					<button>Sign Up</button>
 				</div>
+				<Link to="/login">
+				    <div className="link-back-to-login">Back to Login</div>
+				</Link>
 			</div>	
       </div>
     )
