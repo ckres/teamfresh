@@ -46,7 +46,7 @@
       margin-right: auto;
       border: none;
       width: 90%;
-      height: 28.5rem;
+      height: 29rem;
     }
     @media #{$pc-size} {
       background-color: rgba(255, 255, 255, 0.65);
@@ -56,8 +56,8 @@
       margin-left: auto;
       margin-right: auto;
       border: none;
-      width: 40%;
-      height: 31rem;
+      width: 35%;
+      height: 32rem;
     }
   }
 
@@ -99,8 +99,9 @@
     color: #808080;
     font-size: 15px;
     margin-bottom: 9%;
-    margin-left: 6%;
+    margin-left: 6.5%;
     margin-right: 5%;
+    justify-content: center;
     .link-to-sign {
       text-decoration: underline;
       color: #3DD28F;

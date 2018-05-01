@@ -13,7 +13,6 @@
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-size:cover;
   
   .login-credentials {
     display: flex;
@@ -46,7 +45,7 @@
       margin-left: auto;
       margin-right: auto;
       width: 90%;
-      height: 75%;
+      height: 30rem;
     }
     @media #{$pc-size} {
       background-color: rgba(255, 255, 255, 0.65);
@@ -56,7 +55,7 @@
       margin-left: auto;
       margin-right: auto;
       width: 75%;
-      height: 83%;
+      height: 41rem;
     }
   }
 
