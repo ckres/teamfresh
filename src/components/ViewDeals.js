@@ -153,11 +153,9 @@ class ViewDeals extends Component {
                       </div>
                     </div>
                     <div className="btn-submit">
-                      <input 
-                        type="button"
-                        value="Add to Cart"
+                      <button
                         onClick={this.checkout}
-                      />
+                      >Add to Cart</button>
                     </div>
                   </div>
               )}

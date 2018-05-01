@@ -1,5 +1,7 @@
 @import '../theme.scss';
-
+ body {
+ 	overflow:hidden;
+ }
 .Profile-container {
   background-color: #F0F0F0;
   font-family: 'MuseoSans300', 'sans-serif';
@@ -64,7 +66,28 @@
     }
     .myLabelClass:hover{
     background-color: rgba(255, 255, 255, 0.7);
-}
+	}
+  }
+  .edit-context-bottom {
+    display: flex;
+    color: rgb(120, 120, 120);
+    margin-left: 10%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    strong {
+      color: #4c4c4c;
+    }
+    .myLabelClass{
+      cursor: pointer;
+    }
+    .myInputClass{
+      outline-color: grey;
+      font-size: 20px;
+      color: rgb(120, 120, 120);
+    }
+    .myLabelClass:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+	}
   }
 
   .profile-wrapper {

@@ -69,7 +69,7 @@ render() {
 					onFocusOut={this._handleFocusOut}
 				/>
 			</div>
-			<div className="edit-context">
+			<div className="edit-context-bottom">
 				<strong>City/State/ZIP: </strong>
 				<EditableLabel text='Raleigh/NC/27606'
 					labelClassName='myLabelClass'

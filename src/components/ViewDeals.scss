@@ -94,6 +94,20 @@
             font-family: 'MuseoSans500';
             font-size: 0.8rem;
             padding: 5px;
+            button {
+		      padding: 0 0.8rem;
+		      margin-right: 0.5rem;
+		      border-radius: 0.5rem;
+		      height: 1.2rem;
+		      box-shadow: 0 0.3rem 1rem #e8e8e8;
+		      background-color: #3DD28F;
+		      width: 100px;
+		      color: white;
+		      border: none;
+		      outline: none;
+		      font-size: .8rem;
+		      cursor: pointer;
+            }
             .popup-content {
               width: 75% !important;
               border-radius: 5px;
@@ -146,19 +160,19 @@
                 justify-content: center;
                 padding-bottom: 2em;
               
-                  input {
-                    padding: 0 0.8rem;
-                    margin-right: 0.5rem;
-                    border-radius: 0.5rem;
-                    height: 2.5rem;
-                    box-shadow: 0 0.3rem 1rem #e8e8e8;
-                    background-color: #3DD28F;
-                    width: 90px;
-                    color: white;
-                    border: none;
-                    outline: none;
-                    font-size: 0.8rem;
-                    cursor: pointer;
+                   button {
+				      padding: 0 0.8rem;
+				      margin-right: 0.5rem;
+				      border-radius: 0.5rem;
+				      height: 2.5rem;
+				      box-shadow: 0 0.3rem 1rem #e8e8e8;
+				      background-color: #3DD28F;
+				      width: 120px;
+				      color: white;
+				      border: none;
+				      outline: none;
+				      font-size: 1rem;
+				      cursor: pointer;
                   }
                 }
                 .button {
