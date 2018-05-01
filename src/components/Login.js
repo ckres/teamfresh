@@ -52,14 +52,12 @@ class Login extends Component {
 	            </label>
 	          </div>
 	          <div className="btn-submit">
-	            <input 
-	              type="button"
-	              value="Login"
+	            <button
 	              onClick={this.onLogin}
-	            />
+	            >Login</button>
 	          </div>
 	          <div className="btn-submit">
-	            <Link to={'/signup'}><input type="button" value="Sign Up"/></Link>
+	            <Link to={'/signup'}><button>Sign Up</button></Link>
 	          </div>
 	     </div>
       </div>

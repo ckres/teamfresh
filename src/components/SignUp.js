@@ -43,7 +43,7 @@ export default class SignUp extends Component {
 			        <label>ZIP <input type="text"/></label>
 		        </div>	
 				<div className="btn-submit">
-					<input type="button" value="Sign Up"/>
+					<button>Sign Up</button>
 				</div>
 			</div>	
       </div>

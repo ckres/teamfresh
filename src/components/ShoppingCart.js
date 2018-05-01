@@ -61,7 +61,7 @@ export default class ShoppingCart extends Component {
 							</div>
             </div>
             <div className="btn-basic">
-							<input type="button" value="Delete"/>
+							<button>Delete</button>
 						</div>
           </div>
         </li>
@@ -90,7 +90,7 @@ export default class ShoppingCart extends Component {
 								</ul>
 								<div className="basket-total-purchase">Total Purchase Cost: $57.39</div>
 								<div className="btn-submit">
-									<input type="button" value="Purchase"/>
+									<button>Purchase</button>
 								</div>
 							</Fragment>
 					}
