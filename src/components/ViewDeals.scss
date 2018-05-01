@@ -95,6 +95,7 @@
             font-size: 0.8rem;
             padding: 5px;
             button {
+              -webkit-appearance: none;
 		      padding: 0 0.8rem;
 		      margin-right: 0.5rem;
 		      border-radius: 0.5rem;
@@ -109,6 +110,7 @@
 		      cursor: pointer;
             }
             .popup-content {
+              -webkit-appearance: none;
               width: 75% !important;
               border-radius: 5px;
               .popup {
@@ -161,6 +163,7 @@
                 padding-bottom: 2em;
               
                    button {
+                   	  -webkit-appearance: none;
 				      padding: 0 0.8rem;
 				      margin-right: 0.5rem;
 				      border-radius: 0.5rem;
@@ -176,7 +179,8 @@
                   }
                 }
                 .button {
-                  padding: 0 0.8rem;
+                    -webkit-appearance: none;
+                    padding: 0 0.8rem;
                     margin-right: 0.5rem;
                     border-radius: 0.5rem;
                     height: 1.8rem;

@@ -1,7 +1,5 @@
 @import '../theme.scss';
- body {
- 	overflow:hidden;
- }
+
 .Profile-container {
   background-color: #F0F0F0;
   font-family: 'MuseoSans300', 'sans-serif';
@@ -11,7 +9,7 @@
   object-fit: contain;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-bottom: auto;
 
   .btn-primary {
