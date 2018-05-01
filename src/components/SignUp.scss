@@ -1,3 +1,4 @@
+@import '../theme.scss';
 .SignUp-container {
   font-family: 'MuseoSans300', 'sans-serif';
   background-image: url('../assets/Cover.jpg');
@@ -19,7 +20,7 @@
 	  background: transparent;
 	  border: none;
 	  width: 215%;
-	  border-bottom: 3px solid #3DD28F; //#36bc80 darker variation of freshspire green
+	  border-bottom: 3px solid #3DD28F;
 	  color: #808080;
 	  font-size: 1rem;
 	  position: relative;
@@ -32,21 +33,35 @@
 	  padding-top: 1.75em;
 	  color: #808080;
 	}
+	
   }
 
   .sign-up-wrapper {
-    background-color: rgba(255, 255, 255, 0.65);
-    border-radius: 520px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    width: 90%;
-    height: 57rem;
+    @media #{$mobile-size} {
+      background-color: rgba(255, 255, 255, 0.65);
+      border-radius: 70px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+      width: 90%;
+      height: 56rem;
+    }
+    @media #{$pc-size} {
+      background-color: rgba(255, 255, 255, 0.65);
+      border-radius: 70px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+      width: 40%;
+      height: 60rem;
+    }
   }
 
-  .btn-submit {
+  .btn-submit-sign {
     margin: 1rem 0 0rem 0;
     display: flex;
     align-items: center;
@@ -69,7 +84,18 @@
     }
   }
   
-  .img-format {
+  .link-back-to-login {
+    width: 8em;
+    text-decoration: underline;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: #3DD28F;
+  }
+  
+  .img-format-sign {
     display: block;
     margin: 0 auto;
     width: 100%;

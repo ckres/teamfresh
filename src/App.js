@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom'
 
-import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute } from './components/routes'
+import { ViewDealsRoute, SignUpRoute, LoginRoute, ProfileRoute, ShoppingCartRoute, HistoryRoute, ForgotPassRoute } from './components/routes'
 
 import './App.css'
 
@@ -47,6 +47,13 @@ class App extends Component {
           	render={() => {
           		return <HistoryRoute />
           	}}
+          />
+          <Route
+        	exact
+        	path={'/forgotpass'}
+        	render={() => {
+        		return <ForgotPassRoute />
+        	}}
           />
           <Route
             exact

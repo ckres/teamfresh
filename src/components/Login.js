@@ -59,6 +59,9 @@ class Login extends Component {
 	          <div className="btn-submit">
 	            <Link to={'/signup'}><button>Sign Up</button></Link>
 	          </div>
+	          <Link to="/forgotpass">
+			    <div className="link-forgot">Forgot Password?</div>
+			</Link>
 	     </div>
       </div>
     )
