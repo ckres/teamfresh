@@ -27,7 +27,7 @@ const mockedData = {
       distributor: 'mytraderjoeslist'
     },
     {
-      name: 'Brocoli',
+      name: 'Broccoli',
       thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyVMxizq9vS4Zj5zOcUZ4ROcTrd84boGBDggq3pD64IbLkj8hI',
       price: 3.20,
       price_before: 4.90,

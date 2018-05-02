@@ -1,13 +1,136 @@
+@import '../theme.scss';
 .header {
   font-family: 'MuseoSans300', 'sans-serif';
   font-size: 2rem;
   margin-bottom: 1rem;
+  @media #{$pc-size} {
+    margin-left: 7.5%;
+  }
+  @media #{$mobile-size} {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
   color: #4c4c4c;
 }
+
+.btn-basic {
+  position: absolute;
+  transform: translate(-50%, -130%);
+  top: 100%;
+  left: 3.5rem;
+
+  button {
+    -webkit-appearance: none;
+    padding: 0 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    background-color: #ef594f;
+    width: 5rem;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+} 
+
+.historys-container {
+  font-family: 'MuseoSans300', 'sans-serif';
+  background-size: auto;
   
-.purchase-date {
-  font-family: 'MuseoSans500';
-  color: #4c4c4c;
+  .btn-primary {
+    border: none;
+    background: none;
+  }
 }
   
+.btn-submit {
+  position: relative;
+  margin: 1rem 0 0rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 400;
+
+  button {
+    -webkit-appearance: none;
+    padding: 0 0.8rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    box-shadow: 0 0.3rem 1rem #e8e8e8;
+    background-color: #3DD28F;
+    width: 130px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+ 
+}
   
+.historys-list {
+  display: flex;
+  margin-top: 1%;
+  flex-wrap: wrap;
+  
+  .history-item {
+    margin-bottom: 1.5rem;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0rem .5rem #c3c3c3;
+
+    .history-item-container {
+      display: flex;
+      position: relative;
+      height: 100%;   
+           
+      .history-description {
+        padding: 0.5rem;
+        height: 100%;
+        width: 100%;
+        background-color: #FFFFFF;          
+          .table-history {
+            width: 100%;
+            height: auto;
+          } 
+          
+          th {
+            td:nth-child(even) {
+              
+              @media #{$mobile-size} {
+                text-align: right;
+              }
+              @media #{$pc-size} {
+                text-align: right;
+                padding-left: 70%;
+              }
+            }
+          } 
+          .history-name {
+            font-family: 'MuseoSans500';
+            color: #4c4c4c;
+            padding-top: 0.3%;
+          }
+          .history-text {
+            font-size: 0.8rem;
+            color: #4c4c4c;
+          }
+          .ordernum {
+            font-size: 0.6rem;
+            color: #4c4c4c;
+            padding-top: 2%;
+            text-align: right;
+            color: #3DD28F;
+          }
+      }
+    }
+  }
+}  

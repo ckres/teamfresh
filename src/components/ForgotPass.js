@@ -26,7 +26,7 @@ export default class ForgotPass extends Component {
 					<button>Submit</button>
 				</div>
 				<Link to="/login">
-				    <div className="link-back-to-login2">Back to Login</div>
+				    <a className="link-back-to-login2">Back to Login</a>
 				</Link>
 			</div>	
       </div>

@@ -1,7 +1,16 @@
+@import '../theme.scss';
 .basket-header {
   font-family: 'MuseoSans300', 'sans-serif';
   font-size: 2rem;
   color: #4c4c4c;
+  @media #{$pc-size} {
+    margin-left: 0.1%;
+  }
+  @media #{$mobile-size} {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
   margin-bottom: 1rem;
 }
 
