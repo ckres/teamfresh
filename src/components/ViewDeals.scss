@@ -115,6 +115,11 @@
               border-radius: 5px;
               .popup {
                 padding: 10px;
+                button, input, select {
+                  -webkit-appearance: none;
+                  border: none;
+                  outline: none;
+                }
                 .close {
                   cursor: pointer;
                   position: absolute;

@@ -129,11 +129,11 @@ class ViewDeals extends Component {
                       <div>
                         <strong>Quantity Required (in lbs):</strong>
                         <select id="quantity">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="65">65</option>
-                        <option value="75">75</option>
+                          <option value="10">10</option>
+                          <option value="25">25</option>
+                          <option value="50">50</option>
+                          <option value="65">65</option>
+                          <option value="75">75</option>
                         </select>
                       </div>
                       <br/>
@@ -142,13 +142,14 @@ class ViewDeals extends Component {
                       </div>
                       <br/>
                       <div>
-                        <strong>Deliver by:</strong><input type="date" name="deliverby"/>
+                        <strong>Deliver by:</strong>
+                        <input type="date" name="deliverby"/>
                         <select id="time">
-                        <option value="9">9 AM</option>
-                        <option value="10">10 AM</option>
-                        <option value="11">11 AM</option>
-                        <option value="12">12 PM</option>
-                        <option value="1">1 PM</option>
+                          <option value="9">9 AM</option>
+                          <option value="10">10 AM</option>
+                          <option value="11">11 AM</option>
+                          <option value="12">12 PM</option>
+                          <option value="1">1 PM</option>
                         </select>
                       </div>
                     </div>
