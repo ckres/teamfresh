@@ -156,7 +156,7 @@ class ViewDeals extends Component {
                     <div className="btn-submit">
                       <button
                         onClick={this.checkout}
-                      >Add to Cart</button>
+                      >Add to Basket</button>
                     </div>
                   </div>
               )}
