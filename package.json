@@ -15,6 +15,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "antd": "^3.4.5",
     "mobx": "^4.1.1",
     "mobx-react": "^5.0.0",
     "npm-run-all": "^4.1.2",
@@ -22,12 +23,12 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-background-image-loader": "0.0.5",
     "react-dom": "^16.2.0",
+    "react-icons-kit": "1.0.7",
+    "react-inline-editing": "1.0.10",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "reactjs-popup": "1.1.0",
-    "react-inline-editing": "1.0.10",
-    "store": "^2.0.12",
-    "react-icons-kit": "1.0.7"
+    "store": "^2.0.12"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.7",
