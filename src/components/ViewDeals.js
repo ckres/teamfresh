@@ -99,7 +99,7 @@ class ViewDeals extends Component {
               </div>
               <div className="deal-more-details">
               <Popup 
-                trigger={<button className="more-details-btn"> More details </button>}
+                trigger={<span className="more-details-btn"> More details </span>}
                 style={{
                   width: '75%',
                   borderRadius: '5px',
