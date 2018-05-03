@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { message } from 'antd'
 import { withRouter, Link } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
 
@@ -25,9 +26,13 @@ class Login extends Component {
     const { history } = this.props
     const { username, password } = this.state
     
-    this.props.userStore.login(username, password).then(() => {
-      history.push('/deals')
-    })
+		this.props.userStore.login(username, password)
+			.then(() => {
+				history.push('/deals')
+				message.success('Welcome, you have logged in successfully.')
+			}).catch((e) => {
+				message.error(`${e}, please try login again`)
+			})
   }
   
   render() {

@@ -55,9 +55,9 @@ class UserStore {
           // resolve
           resolve('success')
         } else if (!user) {
-          reject('User doesn\'t exist.')
+          reject('The user doesn\'t exist.')
         } else {
-          reject('Password is incorrect.')
+          reject('The password is incorrect.')
         }
       }, 500)
     })
