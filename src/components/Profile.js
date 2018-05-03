@@ -4,7 +4,6 @@ import EditableLabel from 'react-inline-editing'
 import Menu from './Menu'
 import './Profile.css'
 import logo from '../assets/logo.png'
-import pencil from '../assets/Edit-Profile-Pencil-Green.png'
 
 export default class Profile extends Component {
 state = {
@@ -39,7 +38,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<img src={pencil} alt="edit" className="pencil-format"/>
 			</div>
 			<div className="edit-context">
 				<strong>Email: </strong>
@@ -50,7 +48,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<img src={pencil} alt="edit" className="pencil-format"/>
 			</div>
 			<div className="edit-context">
 				<strong>Phone #: </strong>
@@ -61,7 +58,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<img src={pencil} alt="edit" className="pencil-format"/>
 			</div>
 			<div className="edit-context">
 				<strong>Street Address: </strong>
@@ -72,7 +68,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<img src={pencil} alt="edit" className="pencil-format"/>
 			</div>
 			<div className="edit-context-bottom">
 				<strong>City/State/ZIP: </strong>
@@ -83,7 +78,6 @@ render() {
 					onFocus={this._handleFocus}
 					onFocusOut={this._handleFocusOut}
 				/>
-				<img src={pencil} alt="edit" className="pencil-format"/>
 			</div>
 	  </div>
 		)
