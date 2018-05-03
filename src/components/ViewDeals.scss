@@ -1,3 +1,5 @@
+@import '../theme.scss';
+
 .deals-container {
   font-family: 'MuseoSans300', 'sans-serif';
   .deals-search {
@@ -150,11 +152,13 @@
                   color: #4c4c4c;
                   align-items: center;
                   justify-content: center;
+                  @media #{$pc-size} {
+                    text-align: center;
+                  }
                   .popup-image {
                     padding: 0;
                     display: block;
                     margin: 0 auto;
-                    margin-left: -0.3rem;
                     margin-bottom: 1rem;
                     max-height: 100%;
                     max-width: 100%;
@@ -175,7 +179,7 @@
 				      height: 2.5rem;
 				      box-shadow: 0 0.3rem 1rem #e8e8e8;
 				      background-color: #3DD28F;
-				      width: 120px;
+				      width: 140px;
 				      color: white;
 				      border: none;
 				      outline: none;
