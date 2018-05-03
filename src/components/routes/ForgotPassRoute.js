@@ -3,6 +3,6 @@ import ForgotPass from '../ForgotPass'
 
 export default function ForgotPassRoute() {
 	  return (
-			    <ForgotPass />
-			  )
+			<ForgotPass />
+		)
 }
